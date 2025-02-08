@@ -71,6 +71,7 @@ git add .
 git commit -m "Initial commit from simple-modern-poetry."
 # Create repo on GitHub.
 git remote add origin git@github.com:OWNER/PROJECT.git  # or https://...
+git branch -M main
 git push -u origin main
 ```
 
