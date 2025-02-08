@@ -34,27 +34,35 @@ pipx install poetry
 ```
 
 For Windows or other platforms, see the pyenv and poetry instructions (and I'd love a PR
-to help me update these instructions for Windows!).
-
-## Getting Code
-
-1. [Fork](https://github.com/jlevy/kmd/fork) this repo (having your own fork will make
-   it easier to contribute).
-
-2. [Check out](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
-   the code.
-
-3. Install the package dependencies:
-
-   ```shell
-   poetry install
-   ```
+to help me update these instructions for Windows!). 
 
 ## Development
 
-Developer setup:
+[Fork](https://github.com/jlevy/kmd/fork) this repo (having your own fork will make it
+easier to contribute),
+[check out](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository),
+and then install the package dependencies:
 
 ```shell
+poetry install
+```
+
+Developer workflows:
+
+```shell
+# Run poetry install, lint, and test:
+make
+
+# Build wheel:
+make build
+
+# Linting and testing individually:
+make lint
+make test
+
+# Delete all the build artifacts:
+make clean
+
 # To run a shell within the Python environment:
 poetry shell
 # Thereafter you can run tests.
@@ -62,13 +70,6 @@ poetry shell
 # To run tests:
 pytest   # all tests
 pytest -s src/module/some_file.py  # one test, showing outputs
-
-# Build wheel:
-make build
-
-# Linting and testing:
-make lint
-make test
 
 # Poetry dependency management commands:
 # Upgrade all dependencies:

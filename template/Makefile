@@ -1,8 +1,11 @@
 .DEFAULT_GOAL := default
 
-.PHONY: default lint test build clean
+.PHONY: default install_deps lint test build clean
 
-default: lint test
+default: install_deps lint test
+
+install_deps:
+	poetry install
 
 lint:
 	poetry run python devtools/lint.py

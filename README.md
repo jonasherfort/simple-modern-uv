@@ -63,14 +63,14 @@ repo](https://docs.github.com/en/repositories/creating-and-managing-repositories
 and add your initial code.
 
 ```shell
-cd _changeme_
+cd PROJECT
 git init
 # Adjust code. 
 # Remember to look for any unfilled _changeme_ strings and confirm the LICENSE file!
 git add .
 git commit -m "Initial commit from simple-modern-poetry."
 # Create repo on GitHub.
-git remote add origin git@github.com:_changeme_/_changeme_.git  # or https://...
+git remote add origin git@github.com:OWNER/PROJECT.git  # or https://...
 git push -u origin main
 ```
 
