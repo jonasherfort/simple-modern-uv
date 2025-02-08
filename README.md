@@ -1,36 +1,85 @@
 # clean-poetry-template
 
-This is a minimal, modern Python project template using
-[copier](https://github.com/copier-org/copier):
+This is a minimal, modern Python project template for new projects.
+It's surprisingly hard to find a good one so I'm sharing my own.
 
-- Modern Poetry 2.0 setup with
-  [dynamic versioning](https://github.com/mtkennerly/poetry-dynamic-versioning)
-  to make releases easier along with the
-  [shell](https://github.com/python-poetry/poetry-plugin-shell),
-  and [up](https://github.com/MousaZeidBaker/poetry-plugin-up) plugins.
+It aims to be absolutely as simple as possible and ready to use:
 
-- Simple GitHub CI workflow including publishing to PyPI.
-  To publish a release, just create a release on GitHub.
+- Modern [**Poetry 2.0**](https://github.com/python-poetry/poetry) setup with
+  [dynamic versioning](https://github.com/mtkennerly/poetry-dynamic-versioning) to make
+  releases easier along with the
+  [shell](https://github.com/python-poetry/poetry-plugin-shell), and
+  [up](https://github.com/MousaZeidBaker/poetry-plugin-up) plugins.
 
-- Standard, modern linting, formatting, and testing with black, ruff,
-  usort, mypy, codespell, and pytest.
+- Simple GitHub CI workflow including publishing to PyPI. To publish a release, just
+  create a release on GitHub.
 
-- A starter readme with reminders on setup and basic workflow.
+- Standard, modern linting, formatting, and testing with
+  [**black**](https://github.com/psf/black),
+  [**ruff**](https://github.com/charliermarsh/ruff),
+  [**usort**](https://github.com/facebook/usort),
+  [**mypy**](https://github.com/python/mypy),
+  [**codespell**](https://github.com/codespell-project/codespell), and
+  [**pytest**](https://github.com/pytest-dev/pytest).
 
-It aims to be absolutely as simple as possible and ready to use.
+- A starter readme (here and in the template) with handy reminders on setup and basic
+  workflow.
 
-It doesn't have lots of options or things you need to fill in.
-It just configures Poetry and adds the above essential dev setup
-that should be in place for any modern Python project.
+It uses [**copier**](https://github.com/copier-org/copier), which seems like the best
+tool nowadays for project templates.
 
-To use:
+It doesn't have lots of options or try to use every bell and whistle.
+It just adds the above essential things that should be in place for any new Python
+project.
+
+Those who love the very latest tools might consider
+[**uv**](https://github.com/astral-sh/uv) instead of Poetry, but tool support, including
+GitHub workflows and dependabot, still seem much better for Poetry.
+
+## Python and Tool Dependencies
+
+Sadly, there are many, many ways to install and set up your Python environment, each
+with its own pitfalls.
+
+This is a quick cheat sheet for one of the simplest and most reliable ways to set up
+**Python 3.11+** and **Poetry 2.0+** (what you should use as of 2025) using
+[**pyenv**](https://github.com/pyenv/pyenv) and
+[**pipx**](https://github.com/pypa/pipx).
+
+For macOS:
+
+```shell
+brew update
+brew install pyenv pipx
+```
+
+For Ubuntu:
+
+```shell
+curl https://pyenv.run | bash
+apt install pipx
+```
+
+Now you can install a current Python and Poetry:
+
+```shell
+pyenv install 3.12.9  # Pick the version you want.
+pipx install poetry
+```
+
+For Windows or other platforms, see the pyenv and poetry instructions (and I'd love a PR
+to help me update these instructions for Windows!).
+
+## To Use This Template
 
 ```shell
 pipx install copier
-copier jlevy/clean-poetry-template my-project-name
+copier copy gh:jlevy/clean-poetry-template my-new-project
 ```
 
-Then create a new GitHub repo and add it:
+Then [create a new GitHub
+repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
+and add it:
 
 ```shell
 cd my-project-name

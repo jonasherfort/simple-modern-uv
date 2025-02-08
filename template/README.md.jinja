@@ -4,14 +4,13 @@
 
 ## Python and Tool Dependencies
 
-Required:
+Sadly, there are many, many ways to install and set up your Python environment, each
+with its own pitfalls.
 
-- Python 3.11+
-
-- Poetry 2.0+
-
-The recommended way to do this on your local machine is with pyenv and pipx
-(to bootstrap poetry):
+This is a quick cheat sheet for one of the simplest and most reliable ways to set up
+**Python 3.11+** and **Poetry 2.0+** (both fairly new as of 2025) using
+[**pyenv**](https://github.com/pyenv/pyenv) and
+[**pipx**](https://github.com/pypa/pipx).
 
 For macOS:
 
@@ -33,7 +32,9 @@ Now you can install a current Python and Poetry:
 pyenv install 3.12.9  # Pick the version you want.
 pipx install poetry
 ```
-For Windows or other platforms, see the pyenv and poetry instructions.
+
+For Windows or other platforms, see the pyenv and poetry instructions (and I'd love a PR
+to help me update these instructions for Windows!).
 
 ## Getting Code
 
