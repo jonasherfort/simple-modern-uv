@@ -1,7 +1,8 @@
-# clean-poetry-template
+# simple-modern-poetry
 
-This is a minimal, modern Python project template for new projects.
-It's surprisingly hard to find a good one so I'm sharing my own.
+`simple-modern-poetry` is a minimal, modern **Python project template** for new
+projects. It seemed surprisingly hard to find a good, simple, and modern one so I'm
+sharing what I came up with.
 
 It aims to be absolutely as simple as possible and ready to use:
 
@@ -45,7 +46,7 @@ GitHub workflows and dependabot, still seem much better for Poetry.
 pipx install copier
 
 # Clone this template:
-copier copy gh:jlevy/clean-poetry-template my-new-project
+copier copy gh:jlevy/simple-modern-poetry my-new-project
 ```
 
 You can enter names for project, description, etc., or just press enter and later look
@@ -62,12 +63,14 @@ repo](https://docs.github.com/en/repositories/creating-and-managing-repositories
 and add your initial code.
 
 ```shell
-cd my-project-name
+cd _changeme_
 git init
+# Adjust code. 
+# Remember to look for any unfilled _changeme_ strings and confirm the LICENSE file!
 git add .
-git commit -m "Initial commit from clean-poetry-template."
-git branch -M main
-git remote add origin https://github.com/USERNAME/REPOSITORY.git
+git commit -m "Initial commit from simple-modern-poetry."
+# Create repo on GitHub.
+git remote add origin git@github.com:_changeme_/_changeme_.git  # or https://...
 git push -u origin main
 ```
 
@@ -104,3 +107,15 @@ pipx install poetry
 
 For Windows or other platforms, see the pyenv and poetry instructions (and I'd love a PR
 to help me update these instructions for Windows!).
+
+## Alternatives
+
+There are several other good templates, such as
+[cookiecutter-poetry](https://github.com/fpgmaas/cookiecutter-poetry) and
+[poetry-copier](https://github.com/lukin0110/poetry-copier), but I found existing ones
+to be out of date or have lots of options and scaffolding for different frameworks.
+This template is more of a simple base and you can add what you want to it.
+
+## Contributing
+
+PRs welcome!
