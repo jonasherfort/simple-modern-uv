@@ -4,34 +4,34 @@ _min_copier_version: "9.4.0"
 _subdirectory: template
 _message_after_copy: | 
     Your package template has been copied! Remember to look for any
-    unfilled <<placeholder>> strings and confirm the LICENSE file!
+    unfilled _changeme_ strings and confirm the LICENSE file!
 
 package_name:
     type: str
-    help: What is the package name? (Title Case or lowercase name. This is the only mandatory field.)
-    default: My Package
+    help: What is the package name? (Title Case or lowercase name. This is the only required field.)
+    default: _changeme_
 
 package_slug:
     type: str
-    help: Package slug / repo name? (snake_case)
-    default: package_name
+    help: Package slug / repo name? (Use snake_case. Or press enter to fill in later.)
+    default: _changeme_
 
 package_description:
     type: str
     help: Package description? (Press enter to fill in later.)
-    default: "<<Package Description>>"
+    default: _changeme_
 
 package_author_name:
     type: str
     help: Package author name? (Press enter to fill in later.)
-    default: "<<Author Name>>"
+    default: _changeme_
 
 package_author_email:
     type: str
     help: Package author email? (Press enter to fill in later.)
-    default: "<<author@email>>"
+    default: _changeme_
 
 package_github_org:
     type: str
     help: Package GitHub org or username? (Press enter to fill in later.)
-    default: "<<github_username>>"
+    default: _changeme_

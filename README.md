@@ -36,7 +36,42 @@ Those who love the very latest tools might consider
 [**uv**](https://github.com/astral-sh/uv) instead of Poetry, but tool support, including
 GitHub workflows and dependabot, still seem much better for Poetry.
 
-## Python and Tool Dependencies
+## How To Use This Template
+
+```shell
+# Ensure you have Python 3.11+ and pipx installed. (If not, see below.)
+
+# Install copier:
+pipx install copier
+
+# Clone this template:
+copier copy gh:jlevy/clean-poetry-template my-new-project
+```
+
+You can enter names for project, description, etc., or just press enter and later look
+for `_changeme_` in the code.
+
+## Check Code Into GitHub
+
+You now have the template set up.
+But you will need to check the code into Git for Poetry to work.
+
+For convenience, here is the quick cheat sheet commit to GitHub.
+[Create a new GitHub
+repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
+and add your initial code.
+
+```shell
+cd my-project-name
+git init
+git add .
+git commit -m "Initial commit from clean-poetry-template."
+git branch -M main
+git remote add origin https://github.com/USERNAME/REPOSITORY.git
+git push -u origin main
+```
+
+## Installing Python, pipx, and Poetry
 
 Sadly, there are many, many ways to install and set up your Python environment, each
 with its own pitfalls.
@@ -69,24 +104,3 @@ pipx install poetry
 
 For Windows or other platforms, see the pyenv and poetry instructions (and I'd love a PR
 to help me update these instructions for Windows!).
-
-## To Use This Template
-
-```shell
-pipx install copier
-copier copy gh:jlevy/clean-poetry-template my-new-project
-```
-
-Then [create a new GitHub
-repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
-and add it:
-
-```shell
-cd my-project-name
-git init
-git add .
-git commit -m "Initial commit from clean-poetry-template."
-git branch -M main
-git remote add origin https://github.com/USERNAME/REPOSITORY.git
-git push -u origin main
-```
