@@ -4,7 +4,7 @@
 projects. It seemed surprisingly hard to find a good, simple, and modern one so I'm
 sharing what I came up with.
 
-It should be a good base for serious projects but also understandable so a new Python
+It should be a good base for serious work but also understandable, so a new Python
 developer can use it for even small projects.
 
 It aims to be modern and absolutely as simple as possible and ready to use:
@@ -49,8 +49,7 @@ author, etc. You may also want to change the license/copyright.
 
 This template uses [**copier**](https://github.com/copier-org/copier), which seems like
 the best tool nowadays for project templates.
-
-This is the recommended approach since it then lets you instantiate the template
+Using copier is the recommended approach since it then lets you instantiate the template
 variables, but it requires a few more commands.
 
 To create a new project repo with `copier`:
@@ -92,7 +91,7 @@ git push -u origin main
 The
 [**default template readme**](https://github.com/jlevy/simple-modern-poetry-template)
 covers the install and build workflows.
-It's just poetry and a tiny Makefile with shortcuts.
+It's just Poetry and a tiny Makefile with shortcuts.
 It also has concise documentation on installing Python and Poetry, to save time for you
 or your users.
 
