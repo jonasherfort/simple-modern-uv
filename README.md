@@ -39,6 +39,13 @@ GitHub workflows and dependabot, still seem much better for Poetry.
 
 ## How To Use This Template
 
+It's recommended to use `copier` so you can instantiate the template variables.
+But if you prefer, you can just [**use this GitHub template
+repo**](https://github.com/jlevy/simple-modern-poetry-template) which is the output of
+this template, with `_changeme_` for all field names like project name, author, etc.
+
+To create the repo with `copier`:
+
 ```shell
 # Ensure you have Python 3.11+ and pipx installed. (If not, see below.)
 
