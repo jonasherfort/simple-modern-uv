@@ -1,6 +1,10 @@
-<!-- TEMPLATE README -- REPLACE THIS OR FILL IT IN -->
 
 # {{ package_name }}
+
+\[ ☞☞☞
+**This is the readme for your empty template project. Fill it in and delete this message!** 
+**Below are brief instructions on Python, Poetry, and the dev/release process that you may wish to keep in this readme.**
+\]
 
 ## Installing Python, pipx, and Poetry
 
@@ -77,6 +81,21 @@ poetry up
 # Update poetry itself: 
 poetry self update
 ```
+
+## Release Process
+
+This project is set up to publish to [PyPI](https://pypi.org/) from GitHub Actions.
+
+Thanks to the dynamic versioning plugin and `publish.yml` workflow, you can
+simply create tagged releases on GitHub and the tag will trigger a release
+build, which then uploads it to PyPI.
+
+For this to work you will need to have a PyPI account and authorize your
+repository to publish to PyPI. The simplest way to do that is on
+[the publishing settings page](https://pypi.org/manage/account/publishing/).
+Configure "Trusted Publisher Management" and register your GitHub repo as
+a new "pending" trusted publisher, entering the project name, repo owner,
+repo name, and `publish.yml` as the workflow name.
 
 * * *
 

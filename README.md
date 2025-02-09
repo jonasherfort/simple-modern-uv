@@ -109,14 +109,19 @@ pipx install poetry
 For Windows or other platforms, see the pyenv and poetry instructions (and I'd love a PR
 to help me update these instructions for Windows!).
 
-## Alternatives
+## Why this Template?
 
 There are several other good templates, such as
 [cookiecutter-poetry](https://github.com/fpgmaas/cookiecutter-poetry) and
-[poetry-copier](https://github.com/lukin0110/poetry-copier), but I found existing ones
-to be out of date or have lots of options and scaffolding for different frameworks.
-This template is more of a simple base and you can add what you want to it.
+[poetry-copier](https://github.com/lukin0110/poetry-copier) you may wish to consider.
+
+This template takes a different philosophy.
+I found existing ones to be out of date or have lots of options and scaffolding for
+different frameworks.
+That's hard to maintain in the template and overwhelming to read at first.
+This is intended instead to be a very simple base.
+You can add to it if you want.
 
 ## Contributing
 
-PRs welcome!
+PRs welcome. Please use the Discussions tab for questions or suggestions!
