@@ -4,7 +4,10 @@
 projects. It seemed surprisingly hard to find a good, simple, and modern one so I'm
 sharing what I came up with.
 
-It aims to be absolutely as simple as possible and ready to use:
+It should be a good base for serious projects but also understandable so a new Python
+developer can use it for even small projects.
+
+It aims to be modern and absolutely as simple as possible and ready to use:
 
 - Modern [**Poetry 2.0**](https://github.com/python-poetry/poetry) setup with
   [dynamic versioning](https://github.com/mtkennerly/poetry-dynamic-versioning) to make
@@ -12,8 +15,8 @@ It aims to be absolutely as simple as possible and ready to use:
   [shell](https://github.com/python-poetry/poetry-plugin-shell), and
   [up](https://github.com/MousaZeidBaker/poetry-plugin-up) plugins.
 
-- Simple GitHub CI workflow including publishing to PyPI. To publish a release, just
-  create a release on GitHub.
+- Simple **GitHub CI workflow** including **publishing to PyPI**. To publish a release,
+  just create a release on GitHub.
 
 - Standard, modern linting, formatting, and testing with
   [**black**](https://github.com/psf/black),
@@ -26,25 +29,31 @@ It aims to be absolutely as simple as possible and ready to use:
 - A starter readme (here and in the template) with handy reminders on setup and basic
   workflow.
 
-It uses [**copier**](https://github.com/copier-org/copier), which seems like the best
-tool nowadays for project templates.
-
 It doesn't have lots of options or try to use every bell and whistle.
 It just adds the above essential things that should be in place for any new Python
 project.
 
-Those who love the very latest tools might consider
-[**uv**](https://github.com/astral-sh/uv) instead of Poetry, but tool support, including
-GitHub workflows and dependabot, still seem much better for Poetry.
-
 ## How To Use This Template
 
-It's recommended to use `copier` so you can instantiate the template variables.
-But if you prefer, you can just [**use this GitHub template
-repo**](https://github.com/jlevy/simple-modern-poetry-template) which is the output of
-this template, with `_changeme_` for all field names like project name, author, etc.
+### Option 1: GitHub Template
 
-To create the repo with `copier`:
+Just use
+[**this template repository**](https://github.com/jlevy/simple-modern-poetry-template),
+which is the output of this template.
+
+Go there and hit the "Use this template" button.
+Once you have the code, search for `_changeme_` for all field names like project name,
+author, etc. You may also want to change the license/copyright.
+
+### Option 2: Use Copier
+
+This template uses [**copier**](https://github.com/copier-org/copier), which seems like
+the best tool nowadays for project templates.
+
+This is the recommended approach since it then lets you instantiate the template
+variables, but it requires a few more commands.
+
+To create a new project repo with `copier`:
 
 ```shell
 # Ensure you have Python 3.11+ and pipx installed. (If not, see below.)
@@ -53,21 +62,17 @@ To create the repo with `copier`:
 pipx install copier
 
 # Clone this template:
-copier copy gh:jlevy/simple-modern-poetry my-new-project
+copier copy gh:jlevy/simple-modern-poetry your-project-name
+# Then follow the instructions.
 ```
 
-You can enter names for project, description, etc., or just press enter and later look
-for `_changeme_` in the code.
+You can enter names for the project, description, etc., or just press enter and later
+look for `_changeme_` in the code.
 
-## Check Code Into GitHub
-
-You now have the template set up.
-But you will need to check the code into Git for Poetry to work.
-
-For convenience, here is the quick cheat sheet commit to GitHub.
-[Create a new GitHub
+Once you have the template set up, you will need to check the code into Git for Poetry
+to work. [Create a new GitHub
 repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
-and add your initial code.
+and add your initial code:
 
 ```shell
 cd PROJECT
@@ -77,58 +82,41 @@ git init
 git add .
 git commit -m "Initial commit from simple-modern-poetry."
 # Create repo on GitHub.
-git remote add origin git@github.com:OWNER/PROJECT.git  # or https://...
+git remote add origin git@github.com:OWNER/PROJECT.git  # or https://github.com/...
 git branch -M main
 git push -u origin main
 ```
 
-## Installing Python, pipx, and Poetry
+## Using the Template
 
-Sadly, there are many, many ways to install and set up your Python environment, each
-with its own pitfalls.
-
-This is a quick cheat sheet for one of the simplest and most reliable ways to set up
-**Python 3.11+** and **Poetry 2.0+** (what you should use as of 2025) using
-[**pyenv**](https://github.com/pyenv/pyenv) and
-[**pipx**](https://github.com/pypa/pipx).
-
-For macOS:
-
-```shell
-brew update
-brew install pyenv pipx
-```
-
-For Ubuntu:
-
-```shell
-curl https://pyenv.run | bash
-apt install pipx
-```
-
-Now you can install a current Python and Poetry:
-
-```shell
-pyenv install 3.12.9  # Pick the version you want.
-pipx install poetry
-```
-
-For Windows or other platforms, see the pyenv and poetry instructions (and I'd love a PR
-to help me update these instructions for Windows!).
+The
+[**default template readme**](https://github.com/jlevy/simple-modern-poetry-template)
+covers the install and build workflows.
+It's just poetry and a tiny Makefile with shortcuts.
+It also has concise documentation on installing Python and Poetry, to save time for you
+or your users.
 
 ## Why this Template?
 
-There are several other good templates, such as
+Poetry is likely the best package manager for most new projects.
+Those who love the very latest tools should consider
+[**uv**](https://github.com/astral-sh/uv) instead of Poetry, but currently (early 2025)
+tool support, such as GitHub workflows and dependabot, still seem much better for
+Poetry.
+
+Assuming you want to use Poetry, there are several other good templates, such as
 [cookiecutter-poetry](https://github.com/fpgmaas/cookiecutter-poetry) and
 [poetry-copier](https://github.com/lukin0110/poetry-copier) you may wish to consider.
 
 This template takes a different philosophy.
 I found existing ones to be out of date or have lots of options and scaffolding for
 different frameworks.
-That's hard to maintain in the template and overwhelming to read at first.
+That's hard to maintain in the template repo and overwhelming to read at first.
 This is intended instead to be a very simple base.
 You can add to it if you want.
 
 ## Contributing
 
-PRs welcome. Please use the Discussions tab for questions or suggestions!
+PRs welcome on [this repository](https://github.com/jlevy/simple-modern-poetry) (not on
+the GitHub template repo, which mirrors this one).
+Please use the Discussions tab with your feedback, questions, or suggestions!
