@@ -12,7 +12,7 @@ It aims to be modern and absolutely as simple as possible and ready to use:
 - Modern [**Poetry 2.0**](https://github.com/python-poetry/poetry) setup with
   [dynamic versioning](https://github.com/mtkennerly/poetry-dynamic-versioning) to make
   releases easier along with the
-  [shell](https://github.com/python-poetry/poetry-plugin-shell), and
+  [shell](https://github.com/python-poetry/poetry-plugin-shell) and
   [up](https://github.com/MousaZeidBaker/poetry-plugin-up) plugins.
 
 - Simple **GitHub CI workflow** including **publishing to PyPI**. To publish a release,
