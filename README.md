@@ -52,6 +52,10 @@ the best tool nowadays for project templates.
 Using copier is the recommended approach since it then lets you instantiate the template
 variables, but it requires a few more commands.
 
+Note that copier also has the cool feature that in the future you can
+[update your project](https://copier.readthedocs.io/en/latest/updating/) to reflect any
+changes to this template by running `copier update`.
+
 To create a new project repo with `copier`:
 
 ```shell
