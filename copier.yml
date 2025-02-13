@@ -47,8 +47,3 @@ package_github_org:
     type: str
     help: Package GitHub org or username? (Press enter to fill in later.)
     default: _changeme_
-
-package_license:
-    type: str
-    help: License?
-    default: MIT

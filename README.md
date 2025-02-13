@@ -26,8 +26,8 @@ It aims to be modern and absolutely as simple as possible and ready to use:
   [**codespell**](https://github.com/codespell-project/codespell), and
   [**pytest**](https://github.com/pytest-dev/pytest).
 
-- A starter readme (here and in the template) with handy reminders on setup and basic
-  workflow.
+- A starter readme with handy reminders on setup and basic workflow to save time for you
+  and users or collaborators.
 
 It doesn't have lots of options or try to use every bell and whistle.
 It just adds the above essential things that should be in place for any new Python
@@ -96,8 +96,7 @@ The
 [**default template readme**](https://github.com/jlevy/simple-modern-poetry-template)
 covers the install and build workflows.
 It's just Poetry and a tiny Makefile with shortcuts.
-It also has concise documentation on installing Python and Poetry, to save time for you
-or your users.
+It also has concise documentation on installing Python and Poetry.
 
 ## Why this Template?
 
