@@ -1,13 +1,25 @@
 # simple-modern-poetry
 
-`simple-modern-poetry` is a minimal, modern **Python project template** for new
-projects. It seemed surprisingly hard to find a good, simple, and modern one so I'm
-sharing what I came up with.
+[![As usual, XKCD has a comic for
+this](https://imgs.xkcd.com/comics/python_environment.png)](https://xkcd.com/1987/)
 
-It should be a good base for serious work but also understandable, so a new Python
-developer can use it for even small projects.
+Python installation and setup is notoriously confusing for both beginners and
+experienced Python developers.
 
-It aims to be modern and absolutely as simple as possible and ready to use:
+**simple-modern-poetry** is a minimal, modern **Python project template** for new
+projects (Python 3.10–3.13). This template should be a good base for serious work but
+also simple so it would work for any small project.
+
+It is still surprisingly hard to find a good and modern best practices for setting up
+Python installations and tools without reading many pages of docs on
+[pyenv](https://github.com/pyenv/pyenv),
+[Poetry](https://python-poetry.org/docs/basic-usage/) (and its
+[2.0 update](https://python-poetry.org/blog/announcing-poetry-2.0.0/)),
+[pipx](https://github.com/pypa/pipx),
+[GitHub Actions](https://github.com/actions/setup-python) etc.
+So I'm sharing a template that I now use myself and that I can point friends to.
+
+It aims to be "done right" with modern tools but still absolutely as simple as possible:
 
 - Modern [**Poetry 2.0**](https://github.com/python-poetry/poetry) setup with
   [dynamic versioning](https://github.com/mtkennerly/poetry-dynamic-versioning) to make
@@ -15,8 +27,8 @@ It aims to be modern and absolutely as simple as possible and ready to use:
   [shell](https://github.com/python-poetry/poetry-plugin-shell) and
   [up](https://github.com/MousaZeidBaker/poetry-plugin-up) plugins.
 
-- Simple **GitHub CI workflow** including **publishing to PyPI**. To publish a release,
-  just create a release on GitHub.
+- Simple **GitHub Actions CI workflow** including **publishing to PyPI**. To publish a
+  release, just create a release on GitHub.
 
 - Standard, modern linting, formatting, and testing with
   [**black**](https://github.com/psf/black),
@@ -26,14 +38,32 @@ It aims to be modern and absolutely as simple as possible and ready to use:
   [**codespell**](https://github.com/codespell-project/codespell), and
   [**pytest**](https://github.com/pytest-dev/pytest).
 
-- A starter readme with handy reminders on setup and basic workflow to save time for you
-  and users or collaborators.
+- A **starter readme** with handy reminders on Python and Poetry setup/installation and
+  basic dev workflows using to save time for you and users or collaborators.
+
+- The whole template is **only ~300 lines** of code so you can read it and change what
+  you want.
 
 It doesn't have lots of options or try to use every bell and whistle.
 It just adds the above essential things that should be in place for any new Python
 project.
 
-## How To Use This Template
+## When to Use This Template
+
+It should work whenever you want to use modern Python and Poetry and have a build
+workflow in GitHub. It does not handle:
+
+- Using Docker (but you could add this later)
+
+- Using [Conda](https://github.com/conda/conda) for dependencies (but note many deep
+  learning libraries like PyTorch now support pip so this isn't as necessary as often as
+  it used to be)
+
+- Using a code repo or build system that isn't GitHub and GitHub Actions
+
+(See [below](#alternatives) for other options.)
+
+## How to Use This Template
 
 ### Option 1: GitHub Template
 
@@ -42,8 +72,8 @@ Just use
 which is the output of this template.
 
 Go there and hit the "Use this template" button.
-Once you have the code, search for `_changeme_` for all field names like project name,
-author, etc. You may also want to change the license/copyright.
+Once you have the code, search for **`_changeme_`** for all field names like project
+name, author, etc. You may also want to change the license/copyright.
 
 ### Option 2: Use Copier
 
@@ -90,7 +120,7 @@ git branch -M main
 git push -u origin main
 ```
 
-## Using the Template
+## Getting Started on Your Project
 
 The
 [**default template readme**](https://github.com/jlevy/simple-modern-poetry-template)
@@ -98,13 +128,17 @@ covers the install and build workflows.
 It's just Poetry and a tiny Makefile with shortcuts.
 It also has concise documentation on installing Python and Poetry.
 
-## Why this Template?
+## Alternatives
 
 Poetry is likely the best package manager for most new projects.
-Those who love the very latest tools should consider
-[**uv**](https://github.com/astral-sh/uv) instead of Poetry, but currently (early 2025)
-tool support, such as GitHub workflows and dependabot, still seem much better for
-Poetry.
+Those who love the very latest tools may want to consider
+[**uv**](https://github.com/astral-sh/uv) instead of Poetry.
+Or for [**Conda**](https://github.com/conda/conda) dependencies, also consider the newer
+[**pixi**](https://github.com/prefix-dev/pixi/) package manager.
+
+However, currently (early 2025) Poetry remains the most straightforward option,
+especially since tool support, such as GitHub workflows and dependabot, still seem
+better for Poetry.
 
 Assuming you want to use Poetry, there are several other good templates, such as
 [cookiecutter-poetry](https://github.com/fpgmaas/cookiecutter-poetry) and
