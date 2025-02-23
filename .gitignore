@@ -3,6 +3,12 @@ tmp/
 trash/
 .kmd/
 
+# Python build artifacts
+.ruff_cache/
+.poetry/
+
+# GitHub's standard Python .gitignore:
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
