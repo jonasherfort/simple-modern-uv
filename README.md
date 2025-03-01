@@ -65,6 +65,10 @@ workflow in GitHub. It does not handle:
 
 ## How to Use This Template
 
+> [!NOTE]
+> By default this template uses MIT license.
+> After using, remember to check `license` in pyproject.yaml and update the LICENSE file. 
+
 ### Option 1: GitHub Template
 
 Just use
@@ -110,8 +114,7 @@ and add your initial code:
 ```shell
 cd PROJECT
 git init
-# Adjust code. 
-# Remember to look for any unfilled _changeme_ strings and confirm the LICENSE file!
+    # Make license or other initial adjustments if needed.
 git add .
 git commit -m "Initial commit from simple-modern-poetry."
 # Create repo on GitHub.
