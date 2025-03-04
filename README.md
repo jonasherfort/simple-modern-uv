@@ -3,20 +3,46 @@
 [![As usual, XKCD has a comic for
 this](https://imgs.xkcd.com/comics/python_environment.png)](https://xkcd.com/1987/)
 
+(Approriately enough, this comic is out of date.)
+
 Python installation and setup is notoriously confusing for both beginners and
 experienced Python developers.
 
-**simple-modern-poetry** is a minimal, modern **Python project template** for new
-projects (Python 3.10–3.13). This template should be a good base for serious work but
-also simple so it would work for any small project.
+- In the beginning, there was a hack called
+  [`setup.py`](https://github.com/pypa/setuptools) for packaging (1990s–2000s) and it
+  was not good.
 
-It is still surprisingly hard to find a good and modern best practices for setting up
-Python installations and tools without reading many pages of docs on
+- … then came [`virtualenv`](https://github.com/pypa/virtualenv),
+  [`pip`](https://github.com/pypa/pip), and `requirements.txt` for isolated environments
+  (2008–2011) yet confusion still reigned
+
+- … and meanwhile, [`conda`](https://github.com/conda/conda),
+  [`brew`](https://github.com/Homebrew/brew), and
+  [`PyInstaller`](https://github.com/pyinstaller/pyinstaller) vied to rule the system
+  installations (2010s)
+
+- … until at last [`pyproject.toml`](https://github.com/pypa/pyproject.toml) matured and
+  [`poetry`](https://github.com/python-poetry/poetry) and
+  [`pipx`](https://github.com/pypa/pipx) promised peace and prosperity (2020s)
+
+- … yet tranquility remains elusive, as new rebel forces aligned with Rust stir unrest
+  as [`uv`](https://github.com/astral-sh/uv) and
+  [`pixi`](https://github.com/prefix-dev/pixi) gather strength …
+
+* * *
+
+**simple-modern-poetry** is a minimal, modern **Python project template** for new
+projects (Python 3.10–3.13). This template aims to be a good base for serious work but
+also simple so it's an easy option for any small project.
+
+It is still surprisingly hard to learn modern best practices for setting up Python
+installations and tools without reading many pages of docs on
 [pyenv](https://github.com/pyenv/pyenv),
 [Poetry](https://python-poetry.org/docs/basic-usage/) (and its
 [2.0 update](https://python-poetry.org/blog/announcing-poetry-2.0.0/)),
 [pipx](https://github.com/pypa/pipx),
 [GitHub Actions](https://github.com/actions/setup-python) etc.
+
 So I'm sharing a template that I now use myself and that I can point friends to.
 
 It aims to be "done right" with modern tools but still absolutely as simple as possible:
@@ -65,9 +91,15 @@ workflow in GitHub. It does not handle:
 
 ## How to Use This Template
 
-> [!NOTE]
-> By default this template uses MIT license.
-> After using, remember to check `license` in pyproject.yaml and update the LICENSE file. 
+> [!NOTE] By default this template uses MIT license.
+> If you want a different license or are not publishing your project as open source,
+> update `license` in pyproject.yaml and the LICENSE file.
+> If desired, you may delete the `.github/workflows/publish.yml` file if you are not
+> publishing to PyPI.
+
+The template can be used in two ways.
+Option 1 is quickest.
+For more flexibility, consider Option 2.
 
 ### Option 1: GitHub Template
 
@@ -86,9 +118,8 @@ the best tool nowadays for project templates.
 Using copier is the recommended approach since it then lets you instantiate the template
 variables, but it requires a few more commands.
 
-Note that copier also has the cool feature that in the future you can
-[update your project](https://copier.readthedocs.io/en/latest/updating/) to reflect any
-changes to this template by running `copier update`.
+Note that copier also has the cool feature to [update your project
+template](#updating-your-project-template) as this template improves in the future.
 
 To create a new project repo with `copier`:
 
@@ -130,6 +161,16 @@ The
 covers the install and build workflows.
 It's just Poetry and a tiny Makefile with shortcuts.
 It also has concise documentation on installing Python and Poetry.
+
+## Updating Your Project Template
+
+If you use Option 2 or if you pick Option 1 and correctly fill in your
+`.copier-answers.yml` file, you have the option to update your project with any future
+updates to this template at any time.
+
+If this file is updated with your project name etc., then you can
+[update your project](https://copier.readthedocs.io/en/latest/updating/) to reflect any
+changes to this template by running `copier update`.
 
 ## Alternatives
 
