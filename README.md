@@ -10,7 +10,7 @@ experienced Python developers.
 
 - In the beginning, there was a hack called
   [`setup.py`](https://github.com/pypa/setuptools) for packaging (1990s–2000s) and it
-  was not good.
+  was not good
 
 - … then came [`virtualenv`](https://github.com/pypa/virtualenv),
   [`pip`](https://github.com/pypa/pip), and `requirements.txt` for isolated environments
@@ -26,7 +26,7 @@ experienced Python developers.
   [`pipx`](https://github.com/pypa/pipx) promised peace and prosperity (2020s)
 
 - … yet tranquility remains elusive, as new rebel forces aligned with Rust stir unrest
-  as [`uv`](https://github.com/astral-sh/uv) and
+  and [`uv`](https://github.com/astral-sh/uv) and
   [`pixi`](https://github.com/prefix-dev/pixi) gather strength …
 
 * * *
@@ -54,11 +54,10 @@ It aims to be "done right" with modern tools but still absolutely as simple as p
   releases easier along with the
   [shell](https://github.com/python-poetry/poetry-plugin-shell) and
   [up](https://github.com/MousaZeidBaker/poetry-plugin-up) plugins.
-  (Unsure if you want to use Poetry?
-  See [below](#alternatives).)
+  (Why use Poetry? See [below](#alternatives).)
 
-- Simple **GitHub Actions CI workflow** including **publishing to PyPI**. To publish a
-  release, just create a release on GitHub.
+- Simple **GitHub Actions CI workflow** including (optional) **publishing to PyPI**. To
+  publish a release, just create a release on GitHub.
 
 - Standard, modern linting, formatting, and testing with
   [**black**](https://github.com/psf/black),
@@ -71,7 +70,7 @@ It aims to be "done right" with modern tools but still absolutely as simple as p
 - A **starter readme** with handy reminders on Python and Poetry setup/installation and
   basic dev workflows using to save time for you and users or collaborators.
 
-- The whole template is **only ~300 lines** of code so you can read it and change what
+- The whole template is **only ~300 lines of code** so you can read it and change what
   you want.
 
 It doesn't have lots of options or try to use every bell and whistle.
