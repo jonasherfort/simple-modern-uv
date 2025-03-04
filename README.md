@@ -31,6 +31,8 @@ experienced Python developers.
 
 * * *
 
+## What is This?
+
 **simple-modern-poetry** is a minimal, modern **Python project template** for new
 projects (Python 3.10–3.13). This template aims to be a good base for serious work but
 also simple so it's an easy option for any small project.
@@ -52,6 +54,8 @@ It aims to be "done right" with modern tools but still absolutely as simple as p
   releases easier along with the
   [shell](https://github.com/python-poetry/poetry-plugin-shell) and
   [up](https://github.com/MousaZeidBaker/poetry-plugin-up) plugins.
+  (Unsure if you want to use Poetry?
+  See [below](#alternatives).)
 
 - Simple **GitHub Actions CI workflow** including **publishing to PyPI**. To publish a
   release, just create a release on GitHub.
@@ -91,7 +95,9 @@ workflow in GitHub. It does not handle:
 
 ## How to Use This Template
 
-> [!NOTE] By default this template uses MIT license.
+> [!NOTE]
+> 
+> By default this template uses MIT license.
 > If you want a different license or are not publishing your project as open source,
 > update `license` in pyproject.yaml and the LICENSE file.
 > If desired, you may delete the `.github/workflows/publish.yml` file if you are not
@@ -145,7 +151,7 @@ and add your initial code:
 ```shell
 cd PROJECT
 git init
-    # Make license or other initial adjustments if needed.
+# Make license or other initial adjustments if needed.
 git add .
 git commit -m "Initial commit from simple-modern-poetry."
 # Create repo on GitHub.
@@ -174,7 +180,7 @@ changes to this template by running `copier update`.
 
 ## Alternatives
 
-Poetry is likely the best package manager for most new projects.
+**Poetry** is likely the best package manager for most new projects.
 Those who love the very latest tools may want to consider
 [**uv**](https://github.com/astral-sh/uv) instead of Poetry.
 Or for [**Conda**](https://github.com/conda/conda) dependencies, also consider the newer
