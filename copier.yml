@@ -15,7 +15,7 @@ _message_after_copy: |
     git init
     # Make license or other initial adjustments if needed.
     git add .
-    git commit -m "Initial commit from simple-modern-poetry."
+    git commit -m "Initial commit from simple-modern-uv."
     # Create repo on GitHub.
     git remote add origin git@github.com:OWNER/PROJECT.git  # or https://...
     git branch -M main
@@ -28,7 +28,7 @@ package_name:
 
 package_slug:
     type: str
-    help: Package slug / repo name? (Use snake_case. Or press enter to fill in later.)
+    help: Package slug / repo name? (Use hyphen-case or snake_case. Or press enter to fill in later.)
     default: _changeme_
 
 package_description:

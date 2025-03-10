@@ -1,47 +1,41 @@
-
 # {{ package_name }}
 
-\[ 
-**☞☞☞ This is the readme for a project from the
-[simple-modern-poetry](https://github.com/jlevy/simple-modern-poetry)
-template.**
-Fill it in and delete this message!
-Below are brief instructions on setup and development workflows that you may
-use or modify for your project.
+\[ **☞☞☞ This is the readme for a project from the
+[simple-modern-uv](https://github.com/jlevy/simple-modern-uv) template.** Fill it in and
+delete this message!
+Below are brief instructions on setup and development workflows that you may use or
+modify for your project.
 \]
 
-## Installing Python, pipx, and Poetry
+## Installing uv and Python
 
 Sadly, there are many, many ways to install and set up your Python environment, each
 with its own pitfalls.
 
 This is a quick cheat sheet for one of the simplest and most reliable ways to set up
-**Python 3.11+** and **Poetry 2.0+** (what you should use as of 2025) using
-[**pyenv**](https://github.com/pyenv/pyenv) and
-[**pipx**](https://github.com/pypa/pipx).
+**Python+** with [**uv**](https://), the new Python package manager.
 
-For macOS:
+For macOS, [brew](https://brew.sh/) is a quick way to install uv:
 
 ```shell
 brew update
-brew install pyenv pipx
+brew install uv
 ```
 
 For Ubuntu:
 
 ```shell
-curl https://pyenv.run | bash
-apt install pipx
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-Now you can install a current Python and Poetry:
+See [uv's docs](https://docs.astral.sh/uv/getting-started/installation/) for other
+platforms and methods.
+
+Now you can install a current Python environment:
 
 ```shell
-pyenv install 3.13.2  # Pick the version you want.
-pipx install poetry  # Or use `pipx upgrade poetry` if you've done this before.
+uv python install 3.13 # Or pick another version.
 ```
-
-For Windows or other platforms, see the pyenv and poetry instructions. 
 
 ## Development
 
@@ -50,4 +44,4 @@ For development workflows, see [development.md](development.md).
 * * *
 
 *This project was built from
-[simple-modern-poetry](https://github.com/jlevy/simple-modern-poetry).*
+[simple-modern-uv](https://github.com/jlevy/simple-modern-uv).*

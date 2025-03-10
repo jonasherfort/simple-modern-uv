@@ -1,4 +1,4 @@
-# simple-modern-poetry
+# simple-modern-uv
 
 [![As usual, XKCD has a comic for
 this](https://imgs.xkcd.com/comics/python_environment.png)](https://xkcd.com/1987/)
@@ -25,39 +25,35 @@ experienced Python developers.
   [`poetry`](https://github.com/python-poetry/poetry) and
   [`pipx`](https://github.com/pypa/pipx) promised peace and prosperity (2020s)
 
-- … yet tranquility remains elusive, as new rebel forces aligned with Rust stir unrest
-  and [`uv`](https://github.com/astral-sh/uv) and
-  [`pixi`](https://github.com/prefix-dev/pixi) gather strength …
+- … but new rebel forces [`uv`](https://github.com/astral-sh/uv) and
+  [`pixi`](https://github.com/prefix-dev/pixi) aligned with Rust now gather strength …
 
 * * *
 
 ## What is This?
 
-**simple-modern-poetry** is a minimal, modern **Python project template** for new
-projects (Python 3.10–3.13). This template aims to be a good base for serious work but
-also simple so it's an easy option for any small project.
+**simple-modern-uv** is a minimal, modern **Python project template** for new projects
+(Python 3.10–3.13). This template aims to be a good base for serious work but also
+simple so it's an easy option for any small project.
 
 It is still surprisingly hard to learn modern best practices for setting up Python
-installations and tools without reading many pages of docs on
-[pyenv](https://github.com/pyenv/pyenv),
-[Poetry](https://python-poetry.org/docs/basic-usage/) (and its
-[2.0 update](https://python-poetry.org/blog/announcing-poetry-2.0.0/)),
-[pipx](https://github.com/pypa/pipx),
-[GitHub Actions](https://github.com/actions/setup-python) etc.
+installations. This is a new **uv** template.
 
-So I'm sharing a template that I now use myself and that I can point friends to.
+So I'm sharing a template that I am using myself as I migrate from Poetry to uv.
+(See [simple-modern-poetry](https://github.com/jlevy/simple-modern-poetry) if you want a
+recent Poetry template.)
+I'd originally been a little hesitent to switch tooling, but the advantages of uv
+(beyond it's touted speed) are getting to be too numerous to ignore.
 
-It aims to be "done right" with modern tools but still absolutely as simple as possible:
+This template aims to be "done right" with modern tools but still absolutely as simple
+as possible:
 
-- Modern [**Poetry 2.0**](https://github.com/python-poetry/poetry) setup with
-  [dynamic versioning](https://github.com/mtkennerly/poetry-dynamic-versioning) to make
-  releases easier along with the
-  [shell](https://github.com/python-poetry/poetry-plugin-shell) and
-  [up](https://github.com/MousaZeidBaker/poetry-plugin-up) plugins.
-  (Why use Poetry? See [below](#alternatives).)
+- Modern [**uv**](https://github.com/astral-sh/uv) setup with
+  [dynamic versioning](https://github.com/ninoseki/uv-dynamic-versioning/).
 
-- Simple **GitHub Actions CI workflow** including (optional) **publishing to PyPI**. To
-  publish a release, just create a release on GitHub.
+- Simple [**GitHub Actions**](https://github.com/actions/setup-python) CI workflow
+  including (optional) **publishing to PyPI**. To publish a release, just create a
+  release on GitHub.
 
 - Standard, modern linting, formatting, and testing with
   [**black**](https://github.com/psf/black),
@@ -67,8 +63,8 @@ It aims to be "done right" with modern tools but still absolutely as simple as p
   [**codespell**](https://github.com/codespell-project/codespell), and
   [**pytest**](https://github.com/pytest-dev/pytest).
 
-- A **starter readme** with handy reminders on Python and Poetry setup/installation and
-  basic dev workflows using to save time for you and users or collaborators.
+- A **starter readme** with handy reminders on Python setup/installation and basic dev
+  workflows using to save time for you and users or collaborators.
 
 - The whole template is **only ~300 lines of code** so you can read it and change what
   you want.
@@ -79,8 +75,8 @@ project.
 
 ## When to Use This Template
 
-It should work whenever you want to use modern Python and Poetry and have a build
-workflow in GitHub. It does not handle:
+It should work whenever you want to use modern Python and uv and have a build workflow
+in GitHub. It does not handle:
 
 - Using Docker (but you could add this later)
 
@@ -109,7 +105,7 @@ For more flexibility, consider Option 2.
 ### Option 1: GitHub Template
 
 Just use
-[**this template repository**](https://github.com/jlevy/simple-modern-poetry-template),
+[**this template repository**](https://github.com/jlevy/simple-modern-uv-template),
 which is the output of this template.
 
 Go there and hit the "Use this template" button.
@@ -135,15 +131,15 @@ To create a new project repo with `copier`:
 pipx install copier
 
 # Clone this template:
-copier copy gh:jlevy/simple-modern-poetry your-project-name
+copier copy gh:jlevy/simple-modern-uv your-project-name
 # Then follow the instructions.
 ```
 
 You can enter names for the project, description, etc., or just press enter and later
 look for `_changeme_` in the code.
 
-Once you have the template set up, you will need to check the code into Git for Poetry
-to work. [Create a new GitHub
+Once you have the template set up, you will need to check the code into Git for uv to
+work. [Create a new GitHub
 repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
 and add your initial code:
 
@@ -152,7 +148,7 @@ cd PROJECT
 git init
 # Make license or other initial adjustments if needed.
 git add .
-git commit -m "Initial commit from simple-modern-poetry."
+git commit -m "Initial commit from simple-modern-uv."
 # Create repo on GitHub.
 git remote add origin git@github.com:OWNER/PROJECT.git  # or https://github.com/...
 git branch -M main
@@ -161,11 +157,10 @@ git push -u origin main
 
 ## Getting Started on Your Project
 
-The
-[**default template readme**](https://github.com/jlevy/simple-modern-poetry-template)
-covers the install and build workflows.
-It's just Poetry and a tiny Makefile with shortcuts.
-It also has concise documentation on installing Python and Poetry.
+In the template project itself, the
+[**default readme**](https://github.com/jlevy/simple-modern-uv-template) and the file
+[**development.md**](https://github.com/jlevy/simple-modern-uv-template) covers the
+install and build workflows.
 
 ## Updating Your Project Template
 
@@ -179,29 +174,25 @@ changes to this template by running `copier update`.
 
 ## Alternatives
 
-**Poetry** is likely the best package manager for most new projects.
-Those who love the very latest tools may want to consider
-[**uv**](https://github.com/astral-sh/uv) instead of Poetry.
-Or for [**Conda**](https://github.com/conda/conda) dependencies, also consider the newer
+[**Poetry 2.0**](https://python-poetry.org/docs/basic-usage/) is a good option for
+managing dependencies and is more mature so not as new as uv.
+For [**Conda**](https://github.com/conda/conda) dependencies, also consider the newer
 [**pixi**](https://github.com/prefix-dev/pixi/) package manager.
 
-However, currently (early 2025) Poetry remains the most straightforward option,
-especially since tool support, such as GitHub workflows and dependabot, still seem
-better for Poetry.
+Currently (early 2025) uv is emerging as a far more powerful option.
 
-Assuming you want to use Poetry, there are several other good templates, such as
-[cookiecutter-poetry](https://github.com/fpgmaas/cookiecutter-poetry) and
-[poetry-copier](https://github.com/lukin0110/poetry-copier) you may wish to consider.
+Assuming you want to use uv, there are several other good templates, such as
+[cookiecutter-uv](https://github.com/fpgmaas/cookiecutter-uv) and
+[copier-uv](https://github.com/pawamoy/copier-uv) you may wish to consider.
 
-This template takes a different philosophy.
-I found existing ones to be out of date or have lots of options and scaffolding for
-different frameworks.
-That's hard to maintain in the template repo and overwhelming to read at first.
+This template takes a different more minimalist philosophy.
+I found existing templates to have a lot of machinery you often don't need.
+And it's hard to maintain a complex template repo.
 This is intended instead to be a very simple base.
 You can add to it if you want.
 
 ## Contributing
 
-PRs welcome on [this repository](https://github.com/jlevy/simple-modern-poetry) (not on
-the GitHub template repo, which mirrors this one).
+PRs welcome on [this repository](https://github.com/jlevy/simple-modern-uv) (not on the
+GitHub template repo, which mirrors this one).
 Please use the Discussions tab with your feedback, questions, or suggestions!
