@@ -42,9 +42,8 @@ installations. This is a new **uv** template.
 So I'm sharing a template that I am using myself as I migrate from Poetry to uv.
 (See [simple-modern-poetry](https://github.com/jlevy/simple-modern-poetry) if you want a
 recent Poetry template.)
-I'd originally been a little hesitent to switch tooling, but the advantages of uv
-(beyond it's touted speed) are getting to be too numerous to ignore.
-
+I'd originally been a little hesitent to switch tooling, but the advantages of uv have
+become too numerous to ignore.
 This template aims to be "done right" with modern tools but still absolutely as simple
 as possible:
 
