@@ -3,10 +3,8 @@
 [![As usual, XKCD has a comic for
 this](https://imgs.xkcd.com/comics/python_environment.png)](https://xkcd.com/1987/)
 
-(Approriately enough, this comic is out of date.)
-
-Python installation and setup is notoriously confusing for both beginners and
-experienced Python developers.
+(As usual, XKCD has a comic for this.
+Approriately enough, the comic is out of date.)
 
 - In the beginning, there was a hack called
   [`setup.py`](https://github.com/pypa/setuptools) for packaging (1990s–2000s) and it
@@ -14,45 +12,51 @@ experienced Python developers.
 
 - … then came [`virtualenv`](https://github.com/pypa/virtualenv),
   [`pip`](https://github.com/pypa/pip), and `requirements.txt` for isolated environments
-  (2008–2011) yet confusion still reigned
+  (2008–2011). Yet confusion still reigned
 
 - … and meanwhile, [`conda`](https://github.com/conda/conda),
   [`brew`](https://github.com/Homebrew/brew), and
   [`PyInstaller`](https://github.com/pyinstaller/pyinstaller) vied to rule the system
-  installations (2010s)
+  installations (2010s).
 
-- … until at last [`pyproject.toml`](https://github.com/pypa/pyproject.toml) matured and
-  [`poetry`](https://github.com/python-poetry/poetry) and
-  [`pipx`](https://github.com/pypa/pipx) promised peace and prosperity (2020s)
+- Years of dissatisfaction led to the spread of a new religion,
+  [`pyproject.toml`](https://github.com/pypa/pyproject.toml).
+  Adherents like [`poetry`](https://github.com/python-poetry/poetry) and
+  [`pipx`](https://github.com/pypa/pipx) promised peace and prosperity (2020s) yet
+  somehow, life felt mostly the same …
 
-- … but new rebel forces [`uv`](https://github.com/astral-sh/uv) and
-  [`pixi`](https://github.com/prefix-dev/pixi) aligned with Rust now gather strength …
+- But suddenly there was an invasion of AI robots.
+  New rebel forces [`uv`](https://github.com/astral-sh/uv) and
+  [`pixi`](https://github.com/prefix-dev/pixi) aligned with Rust gathered strength …
 
 * * *
 
 ## What is This?
 
 **simple-modern-uv** is a minimal, modern **Python project template** for new projects
-(Python 3.10–3.13). This template aims to be a good base for serious work but also
-simple so it's an easy option for any small project.
+(Python 3.10–3.13) based on **uv**. This template aims to be a good base for serious
+work but also simple so it's an easy option for any small project, like an open source
+library or tool.
 
-It is still surprisingly hard to learn modern best practices for setting up Python
-installations. This is a new **uv** template.
+I'm sharing this template, which I am using myself as I migrate from Poetry to uv.
+I'd originally been a little hesitent to switch tooling too soon, but the advantages of
+uv have become too numerous to ignore.
+(See [simple-modern-poetry](https://github.com/jlevy/simple-modern-poetry) if you still
+want to use Poetry.)
 
-So I'm sharing a template that I am using myself as I migrate from Poetry to uv.
-(See [simple-modern-poetry](https://github.com/jlevy/simple-modern-poetry) if you want a
-recent Poetry template.)
-I'd originally been a little hesitent to switch tooling, but the advantages of uv have
-become too numerous to ignore.
-This template aims to be "done right" with modern tools but still absolutely as simple
-as possible:
+The accidents of history make it still surprisingly hard to learn best practices for
+setting up Python projects and dependencies.
+I've drawn some of it from [other templates](#alternatives) and wanted it to be modern
+and "done right" but *absolutely as simple as possible*:
 
-- Modern [**uv**](https://github.com/astral-sh/uv) setup with
-  [dynamic versioning](https://github.com/ninoseki/uv-dynamic-versioning/).
+- [**uv**](https://github.com/astral-sh/uv) project setup and dev workflows.
 
-- Simple [**GitHub Actions**](https://github.com/actions/setup-python) CI workflow
-  including (optional) **publishing to PyPI**. To publish a release, just create a
-  release on GitHub.
+- Simple [**GitHub Actions**](https://github.com/actions/setup-python) CI workflows,
+  including (optional) **publishing to PyPI**.
+
+- [**Dynamic versioning**](https://github.com/ninoseki/uv-dynamic-versioning/) so
+  release and package publication is as simple as creating a tag/release on GitHub (no
+  machinery needed to update/commit files every release).
 
 - Standard, modern linting, formatting, and testing with
   [**black**](https://github.com/psf/black),
@@ -62,22 +66,30 @@ as possible:
   [**codespell**](https://github.com/codespell-project/codespell), and
   [**pytest**](https://github.com/pytest-dev/pytest).
 
-- A **starter readme** with handy reminders on Python setup/installation and basic dev
-  workflows using to save time for you and users or collaborators.
+- A **starter readme** with handy reminders on uv Python setup/installation and basic
+  dev workflows using to save time for you and users or collaborators.
 
 - The whole template is **only ~300 lines of code** so you can read it and change what
   you want.
 
 It doesn't have lots of options or try to use every bell and whistle.
-It just adds the above essential things that should be in place for any new Python
-project.
+It just adds the above essentials.
 
-## When to Use This Template
+Finally, the template is in [**copier**](https://github.com/copier-org/copier) format,
+which (unlike with many templates) means you can
+[pull future changes](#updating-your-project-template) to the this template back into
+your project any time.
 
-It should work whenever you want to use modern Python and uv and have a build workflow
-in GitHub. It does not handle:
+It should work whenever you want to use modern Python and uv with a build workflow in
+GitHub.
 
-- Using Docker (but you could add this later)
+## What This Template Does Not Include
+
+This template **does not** handle:
+
+- Using Docker
+
+- Building websites or docs, e.g. with [mkdocs](https://github.com/mkdocs/mkdocs)
 
 - Using [Conda](https://github.com/conda/conda) for dependencies (but note many deep
   learning libraries like PyTorch now support pip so this isn't as necessary as often as
@@ -85,7 +97,11 @@ in GitHub. It does not handle:
 
 - Using a code repo or build system that isn't GitHub and GitHub Actions
 
-(See [below](#alternatives) for other options.)
+- Boilerplate docs or project management of any kind, like issue templates, contributing
+  guidelines, code of conduct, etc.
+
+If you want them, just add these yourself.
+:) Or see [below](#alternatives) for other templates.
 
 ## How to Use This Template
 
@@ -113,13 +129,14 @@ name, author, etc. You may also want to change the license/copyright.
 
 ### Option 2: Use Copier
 
-This template uses [**copier**](https://github.com/copier-org/copier), which seems like
-the best tool nowadays for project templates.
-Using copier is the recommended approach since it then lets you instantiate the template
-variables, but it requires a few more commands.
+This template uses **copier**, which seems like the best tool nowadays for project
+templates. Using copier is the recommended approach since it then lets you instantiate
+the template variables, but it requires a few more commands.
 
-Note that copier also has the cool feature to [update your project
-template](#updating-your-project-template) as this template improves in the future.
+> [!NOTE]
+> 
+> Copier has the cool feature to [update your project
+> template](#updating-your-project-template) as this template improves in the future.
 
 To create a new project repo with `copier`:
 
@@ -173,25 +190,24 @@ changes to this template by running `copier update`.
 
 ## Alternatives
 
+There are several other good uv templates, such as
+[cookiecutter-uv](https://github.com/fpgmaas/cookiecutter-uv) and
+[copier-uv](https://github.com/pawamoy/copier-uv) you may wish to consider.
+
+This template takes a different more minimalist philosophy.
+I found existing templates to have machinery or files you often don't need.
+And it's hard to maintain a complex template repo.
+This is intended instead to be a very simple template.
+You can always add to it if you want.
+
 [**Poetry 2.0**](https://python-poetry.org/docs/basic-usage/) is a good option for
 managing dependencies and is more mature so not as new as uv.
 For [**Conda**](https://github.com/conda/conda) dependencies, also consider the newer
 [**pixi**](https://github.com/prefix-dev/pixi/) package manager.
 
-Currently (early 2025) uv is emerging as a far more powerful option.
-
-Assuming you want to use uv, there are several other good templates, such as
-[cookiecutter-uv](https://github.com/fpgmaas/cookiecutter-uv) and
-[copier-uv](https://github.com/pawamoy/copier-uv) you may wish to consider.
-
-This template takes a different more minimalist philosophy.
-I found existing templates to have a lot of machinery you often don't need.
-And it's hard to maintain a complex template repo.
-This is intended instead to be a very simple base.
-You can add to it if you want.
-
 ## Contributing
 
+I'm new to uv, so please help me improve this!
+Please use the Discussions thread with any feedback or suggestions.
 PRs welcome on [this repository](https://github.com/jlevy/simple-modern-uv) (not on the
 GitHub template repo, which mirrors this one).
-Please use the Discussions tab with your feedback, questions, or suggestions!
