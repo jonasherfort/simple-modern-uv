@@ -12,7 +12,7 @@ the code, and install the package dependencies:
 uv sync --all-extras --dev
 ```
 
-Developer workflows:
+Developer workflows: The Makefile simply provides shortcuts to uv commands:
 
 ```shell
 # Run uv sync, lint, and test:
@@ -30,6 +30,9 @@ make test
 # Delete all the build artifacts:
 make clean
 
+# Upgrade dependencies to compatible versions:
+make upgrade
+
 # To run tests by hand:
 uv run pytest   # all tests
 uv run pytest -s src/module/some_file.py  # one test, showing outputs
@@ -37,7 +40,7 @@ uv run pytest -s src/module/some_file.py  # one test, showing outputs
 # Build and install current dev executables to use as local tools:
 uv tool install --editable .
 
-# Dependency management commands:
+# Dependency management with uv:
 # Add a new dependency:
 uv add package_name
 # Add a development dependency:
