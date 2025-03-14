@@ -59,9 +59,7 @@ and "done right" but *absolutely as simple as possible*:
   machinery needed to update/commit files every release).
 
 - Standard, modern linting, formatting, and testing with
-  [**black**](https://github.com/psf/black),
   [**ruff**](https://github.com/charliermarsh/ruff),
-  [**usort**](https://github.com/facebook/usort),
   [**mypy**](https://github.com/python/mypy),
   [**codespell**](https://github.com/codespell-project/codespell), and
   [**pytest**](https://github.com/pytest-dev/pytest).
