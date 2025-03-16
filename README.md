@@ -198,10 +198,10 @@ And it's hard to maintain a complex template repo.
 This is intended instead to be a very simple template.
 You can always add to it if you want.
 
-[**Poetry 2.0**](https://python-poetry.org/docs/basic-usage/) is a good option for
-managing dependencies and is more mature so not as new as uv.
-For [**Conda**](https://github.com/conda/conda) dependencies, also consider the newer
-[**pixi**](https://github.com/prefix-dev/pixi/) package manager.
+[Poetry](https://python-poetry.org/docs/basic-usage/) is a good option for managing
+dependencies and is not as new as uv and arguably more mature (it just hit version 2.0).
+For [Conda](https://github.com/conda/conda) dependencies, also consider the newer
+[pixi](https://github.com/prefix-dev/pixi/) package manager.
 
 ## Contributing
 
