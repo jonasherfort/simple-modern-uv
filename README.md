@@ -127,9 +127,10 @@ name, author, etc. You may also want to change the license/copyright.
 
 ### Option 2: Use Copier
 
-This template uses **copier**, which seems like the best tool nowadays for project
-templates. Using copier is the recommended approach since it then lets you instantiate
-the template variables, but it requires a few more commands.
+This template uses [copier](https://github.com/copier-org/copier), which seems like the
+best tool nowadays for project templates.
+Using copier is the recommended approach since it then lets you instantiate the template
+variables, but it requires a few more commands.
 
 > [!NOTE]
 > 
@@ -139,10 +140,8 @@ the template variables, but it requires a few more commands.
 To create a new project repo with `copier`:
 
 ```shell
-# Ensure you have Python 3.11+ and pipx installed. (If not, see below.)
-
 # Install copier:
-pipx install copier
+uv tool install copier
 
 # Clone this template:
 copier copy gh:jlevy/simple-modern-uv your-project-name
