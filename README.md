@@ -1,10 +1,12 @@
-# simple-modern-uv
-
 [![As usual, XKCD has a comic for
 this](https://imgs.xkcd.com/comics/python_environment.png)](https://xkcd.com/1987/)
 
 (As usual, XKCD has a comic for this.
 Approriately enough, the comic is out of date.)
+
+# simple-modern-uv
+
+## The Story So Far…
 
 - In the beginning, there was a hack called
   [`setup.py`](https://github.com/pypa/setuptools) for packaging (1990s–2000s) and it
@@ -25,8 +27,8 @@ Approriately enough, the comic is out of date.)
   [`pipx`](https://github.com/pypa/pipx) promised peace and prosperity (2020s) yet
   somehow, life felt mostly the same …
 
-- But suddenly there was an invasion of AI robots.
-  New rebel forces [`uv`](https://github.com/astral-sh/uv) and
+- Then, as the early AI robots invasions began, new rebel forces
+  [`uv`](https://github.com/astral-sh/uv) and
   [`pixi`](https://github.com/prefix-dev/pixi) aligned with Rust gathered strength …
 
 * * *
@@ -34,15 +36,13 @@ Approriately enough, the comic is out of date.)
 ## What is This?
 
 **simple-modern-uv** is a minimal, modern **Python project template** for new projects
-(Python 3.10–3.13) based on **uv**. This template aims to be a good base for serious
-work but also simple so it's an easy option for any small project, like an open source
-library or tool.
+(Python 3.10–3.13) based on [**uv**](https://docs.astral.sh/uv/). This template aims to
+be a good base for serious work but also simple so it's an easy option for any small
+project, like an open source library or tool.
 
 I'm sharing this template, which I am using myself as I migrate from Poetry to uv.
 I'd originally been a little hesitent to switch tooling too soon, but the advantages of
 uv have become too numerous to ignore.
-(See [simple-modern-poetry](https://github.com/jlevy/simple-modern-poetry) if you still
-want to use Poetry.)
 
 The accidents of history make it still surprisingly hard to learn best practices for
 setting up Python projects and dependencies.
@@ -187,20 +187,32 @@ changes to this template by running `copier update`.
 
 ## Alternatives
 
-There are several other good uv templates, such as
-[cookiecutter-uv](https://github.com/fpgmaas/cookiecutter-uv) and
-[copier-uv](https://github.com/pawamoy/copier-uv) you may wish to consider.
+[Poetry](https://python-poetry.org/docs/basic-usage/) is a good option for managing
+dependencies and is not as new as uv and arguably more mature (it just hit version 2.0).
+This template is based on my earlier Poetry template,
+[**simple-modern-poetry**](https://github.com/jlevy/simple-modern-poetry).
 
-This template takes a different more minimalist philosophy.
+A great resource to check is
+[**python-blueprint**](https://github.com/johnthagen/python-blueprint), which is a more
+established template with an excellent overview of other standard Python project best
+practices. It uses [Poetry](https://python-poetry.org/docs/basic-usage/),
+[nox](https://github.com/wntrblm/nox),
+[Material for Mkdocs](https://github.com/squidfunk/mkdocs-material), and Docker.
+
+For [Conda](https://github.com/conda/conda) dependencies, also consider the newer
+[**pixi**](https://github.com/prefix-dev/pixi/) package manager.
+
+Finally, there are several other good uv templates, such as
+[**cookiecutter-uv**](https://github.com/fpgmaas/cookiecutter-uv) and
+[**copier-uv**](https://github.com/pawamoy/copier-uv) you may wish to consider.
+
+This template takes a different philosophy.
+I think project templates should be **3 Ms: minimalist, modern, and maintained**.
+
 I found existing templates to have machinery or files you often don't need.
 And it's hard to maintain a complex template repo.
 This is intended instead to be a very simple template.
 You can always add to it if you want.
-
-[Poetry](https://python-poetry.org/docs/basic-usage/) is a good option for managing
-dependencies and is not as new as uv and arguably more mature (it just hit version 2.0).
-For [Conda](https://github.com/conda/conda) dependencies, also consider the newer
-[pixi](https://github.com/prefix-dev/pixi/) package manager.
 
 ## Contributing
 
