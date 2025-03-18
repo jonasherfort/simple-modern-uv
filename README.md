@@ -31,8 +31,6 @@ Approriately enough, the comic is out of date.)
   [`uv`](https://github.com/astral-sh/uv) and
   [`pixi`](https://github.com/prefix-dev/pixi) aligned with Rust gathered strength …
 
-* * *
-
 ## What is This?
 
 **simple-modern-uv** is a minimal, modern **Python project template** for new projects
@@ -64,8 +62,12 @@ and "done right" but *absolutely as simple as possible*:
   [**codespell**](https://github.com/codespell-project/codespell), and
   [**pytest**](https://github.com/pytest-dev/pytest).
 
-- A **starter readme** with handy reminders on uv Python setup/installation and basic
-  dev workflows using to save time for you and users or collaborators.
+- **Starter docs**
+  ([README.md](https://github.com/jlevy/simple-modern-uv/blob/main/template/README.md.jinja)
+  and
+  [development.md](https://github.com/jlevy/simple-modern-uv/blob/main/template/development.md.jinja))
+  with handy reminders on uv Python setup/installation and basic dev workflows using to
+  save time for you, users, and collaborators.
 
 - The whole template is **only ~300 lines of code** so you can read it and change what
   you want.
