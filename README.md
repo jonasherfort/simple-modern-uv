@@ -44,8 +44,9 @@ uv have become too numerous to ignore.
 
 The accidents of history make it still surprisingly hard to learn best practices for
 setting up Python projects and dependencies.
-I've drawn some of it from [other templates](#alternatives) and wanted it to be modern
-and "done right" but *absolutely as simple as possible*:
+I think a good project template should be **3 Ms: minimalist, modern, and maintained**.
+I looked at [other templates](#alternatives) but wanted one that was modern and "done
+right" but *absolutely as simple as possible*:
 
 - [**uv**](https://github.com/astral-sh/uv) project setup and dev workflows.
 
@@ -69,16 +70,16 @@ and "done right" but *absolutely as simple as possible*:
   with handy reminders on uv Python setup/installation and basic dev workflows using to
   save time for you, users, and collaborators.
 
-- The whole template is **only ~300 lines of code** so you can read it and change what
-  you want.
+- In [**copier**](https://github.com/copier-org/copier) format, which (unlike with many
+  templates) means you can [pull future changes](#updating-your-project-template) to the
+  this template back into your project any time.
+
+- Short enough to read and understand in 10 minutes.
+  It's **only ~300 lines of code** so you can just look at it, use it, and change what
+  you want without fuss.
 
 It doesn't have lots of options or try to use every bell and whistle.
 It just adds the above essentials.
-
-Finally, the template is in [**copier**](https://github.com/copier-org/copier) format,
-which (unlike with many templates) means you can
-[pull future changes](#updating-your-project-template) to the this template back into
-your project any time.
 
 It should work whenever you want to use modern Python and uv with a build workflow in
 GitHub.
@@ -208,9 +209,7 @@ Finally, there are several other good uv templates, such as
 [**cookiecutter-uv**](https://github.com/fpgmaas/cookiecutter-uv) and
 [**copier-uv**](https://github.com/pawamoy/copier-uv) you may wish to consider.
 
-This template takes a different philosophy.
-I think project templates should be **3 Ms: minimalist, modern, and maintained**.
-
+This template takes a somewhat different philosophy.
 I found existing templates to have machinery or files you often don't need.
 And it's hard to maintain a complex template repo.
 This is intended instead to be a very simple template.
