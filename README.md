@@ -58,8 +58,12 @@ right" but *absolutely as simple as possible*:
   machinery needed to update/commit files every release).
 
 - Standard, modern linting, formatting, and testing with
-  [**ruff**](https://github.com/charliermarsh/ruff),
-  [**mypy**](https://github.com/python/mypy),
+  [**ruff**](https://github.com/charliermarsh/ruff) (a linter and formatter that now
+  replaces [black](https://github.com/psf/black)),
+  [**BasedPyright**](https://github.com/detachhead/basedpyright) (an improved
+  alternative to [pyright](https://github.com/microsoft/pyright) that is faster than
+  [mypy](https://github.com/python/mypy) and seems to have better
+  [VSCode/Cursor support](https://marketplace.visualstudio.com/items?itemName=detachhead.basedpyright)),
   [**codespell**](https://github.com/codespell-project/codespell), and
   [**pytest**](https://github.com/pytest-dev/pytest).
 
