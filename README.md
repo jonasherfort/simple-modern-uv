@@ -151,7 +151,7 @@ To create a new project repo with `copier`:
 uv tool install copier
 
 # Clone this template:
-copier copy gh:jlevy/simple-modern-uv your-project-name
+copier copy gh:jlevy/simple-modern-uv your-project-name -r main
 # Then follow the instructions.
 ```
 
