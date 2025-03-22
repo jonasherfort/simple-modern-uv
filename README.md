@@ -137,11 +137,11 @@ checker for Python. Mypy has since been enhanced with
 
 The other popular alternative is Microsoft's
 [Pyright](https://github.com/microsoft/pyright).
-And it has an extension/fork called
+And it has a newer extension and fork called
 [BasedPyright](https://github.com/DetachHead/basedpyright).
 
-All of these work, but note this is a choice not just of the build tooling but it is
-good to have it align with your IDE warnings.
+All of these work. But note this is a choice not just of the build tooling—it best to
+have it align with your IDE warnings.
 With the rises of AI-powered IDEs like Cursor and Windsurf that are VSCode extensions,
 it seems like type checking support as a VSCode-compatible extension is essential.
 
@@ -151,9 +151,10 @@ is licensed only for use in VSCode and sometimes refuses to work in Cursor.
 [Cursor's docs](https://docs.cursor.com/guides/languages/python) suggest mypy but don't
 suggest a VSCode extension.
 
-After some experimentation, I found BasedPyright seems like an improved alternative to
-[pyright](https://github.com/microsoft/pyright).
-BasedPyright is newer but well maintained, is faster than Mypy, and has a good
+After some experimentation, I found
+[BasedPyright](https://github.com/detachhead/basedpyright) to be a credible improvement
+on [Pyright](https://github.com/microsoft/pyright).
+BasedPyright is well maintained, is faster than Mypy, and has a good
 [VSCode extension](https://marketplace.visualstudio.com/items?itemName=detachhead.basedpyright)
 that works with Cursor and other VSCode forks.
 So I have now switched this template to use BasedPyright.
