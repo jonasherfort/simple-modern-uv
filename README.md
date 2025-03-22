@@ -2,34 +2,9 @@
 this](https://imgs.xkcd.com/comics/python_environment.png)](https://xkcd.com/1987/)
 
 (As usual, XKCD has a comic for this.
-Approriately enough, the comic is out of date.)
+Appropriately enough, the comic is out of date.)
 
 # simple-modern-uv
-
-## The Story So Far…
-
-- In the beginning, there was a hack called
-  [`setup.py`](https://github.com/pypa/setuptools) for packaging (1990s–2000s) and it
-  was not good
-
-- … then came [`virtualenv`](https://github.com/pypa/virtualenv),
-  [`pip`](https://github.com/pypa/pip), and `requirements.txt` for isolated environments
-  (2008–2011). Yet confusion still reigned
-
-- … and meanwhile, [`conda`](https://github.com/conda/conda),
-  [`brew`](https://github.com/Homebrew/brew), and
-  [`PyInstaller`](https://github.com/pyinstaller/pyinstaller) vied to rule the system
-  installations (2010s).
-
-- Years of dissatisfaction led to the spread of a new religion,
-  [`pyproject.toml`](https://github.com/pypa/pyproject.toml).
-  Adherents like [`poetry`](https://github.com/python-poetry/poetry) and
-  [`pipx`](https://github.com/pypa/pipx) promised peace and prosperity (2020s) yet
-  somehow, life felt mostly the same …
-
-- Then, as the early AI robots invasions began, new rebel forces
-  [`uv`](https://github.com/astral-sh/uv) and
-  [`pixi`](https://github.com/prefix-dev/pixi) aligned with Rust gathered strength …
 
 ## What is This?
 
@@ -38,57 +13,156 @@ Approriately enough, the comic is out of date.)
 be a good base for serious work but also simple so it's an easy option for any small
 project, like an open source library or tool.
 
-I'm sharing this template, which I am using myself as I migrate from Poetry to uv.
-I'd originally been a little hesitent to switch tooling too soon, but the advantages of
-uv have become too numerous to ignore.
+> [!NOTE]
+> 
+> You can remember or share this template at the short url
+> [**git.new/uvproject**](https://git.new/uvproject).
 
-The accidents of history make it still surprisingly hard to learn best practices for
-setting up Python projects and dependencies.
+## Why a New Python Project Template?
+
+> **The Story So Far**
+> 
+> In the beginning, there was a hack called
+> [`setup.py`](https://github.com/pypa/setuptools) for packaging (1990s–2000s) and it
+> was not good.
+> 
+> Then there arose [`virtualenv`](https://github.com/pypa/virtualenv),
+> [`pip`](https://github.com/pypa/pip), and `requirements.txt` for isolated environments
+> (2008–2011). Yet confusion still reigned.
+> 
+> Meanwhile, [`conda`](https://github.com/conda/conda),
+> [`pyenv`](https://github.com/pyenv/pyenv), [`brew`](https://github.com/Homebrew/brew),
+> and [`PyInstaller`](https://github.com/pyinstaller/pyinstaller) vied to rule the
+> system installations (2010s).
+> 
+> Years of dissatisfaction led to the spread of a new religion,
+> [`pyproject.toml`](https://github.com/pypa/pyproject.toml).
+> Adherents of [`poetry`](https://github.com/python-poetry/poetry),
+> [`pipenv`](https://github.com/pypa/pipenv), and [`pipx`](https://github.com/pypa/pipx)
+> promised peace and prosperity (2020s) yet somehow, life felt mostly the same.
+> 
+> Then AI robots began to invade.
+> Rebel forces [`uv`](https://github.com/astral-sh/uv) and
+> [`pixi`](https://github.com/prefix-dev/pixi) aligned with Rust gathered strength …
+
+Apologies for the digression.
+
+The point is that unfortunately, the accidents of history make it hard to learn best
+practices for setting up Python projects and dependencies.
+But it shouldn't have to be this confusing, especially since uv has now significantly
+simplified Python dev tooling.
+
 I think a good project template should be **3 Ms: minimalist, modern, and maintained**.
 I looked at [other templates](#alternatives) but wanted one that was modern and "done
-right" but *absolutely as simple as possible*:
+right" but *absolutely as simple as possible*. Few existing templates seem to be both
+simple and use the newest generation of tools and best practices.
 
-- [**uv**](https://github.com/astral-sh/uv) project setup and dev workflows.
+If you haven't switched to uv, I can say I too was a little hesitant.
+It can be needlessly painful to switch dev tooling prematurely, simply be cause a new
+tool is shiny and new.
+But the advantages of uv have become too numerous to ignore.
 
-- Simple [**GitHub Actions**](https://github.com/actions/setup-python) CI workflows,
-  including (optional) **publishing to PyPI**.
+This is the template I now use myself as I learned uv and have been migrating from
+Poetry to uv for several projects.
+It's new but it's working well.
+
+Also, a key benefit is it uses [**copier**](https://github.com/copier-org/copier) format
+as a template. This means (unlike with most templates) you can
+[pull future changes](#updating-your-project-template) to this template back into your
+project any time.
+
+> [!NOTE]
+> 
+> If you're not familiar with copier, take a moment to understand copier's very cool
+> update feature. In addition to being a a template you can copy, it it also lets you
+> [update your project](#updating-your-project-template) with improvements to this
+> template after you copy it!
+
+The template is short enough to read and understand in about 10 minutes.
+It's **only ~300 lines of code** so you can just look at it, use it, and change what you
+want without fuss.
+
+Because this template is minimal, you can always start with it and then pull in other
+tools and features if you want them.
+
+## Tools Used by simple-modern-uv
+
+This template uses the tools I've come to think are best for new projects:
+
+- [**uv**](https://github.com/astral-sh/uv) for project setup and dependencies.
+  There is also a simple makefile for dev workflows, but it simply is a convenience for
+  running uv commands.
+
+- [**ruff**](https://github.com/charliermarsh/ruff) for modern linting and formatting.
+  Previously, [black](https://github.com/psf/black) was the definitive formatting tool,
+  but ruff now handles linting and fast, black-compatible formatting.
+
+- [**GitHub Actions**](https://github.com/actions/setup-python) for CI and publishing
+  workflows.
 
 - [**Dynamic versioning**](https://github.com/ninoseki/uv-dynamic-versioning/) so
   release and package publication is as simple as creating a tag/release on GitHub (no
-  machinery needed to update/commit files every release).
+  machinery needed to manually bump versions and commit files every release).
 
-- Standard, modern linting, formatting, and testing with
-  [**ruff**](https://github.com/charliermarsh/ruff) (a linter and formatter that now
-  replaces [black](https://github.com/psf/black)),
-  [**BasedPyright**](https://github.com/detachhead/basedpyright) (an improved
-  alternative to [pyright](https://github.com/microsoft/pyright) that is faster than
-  [mypy](https://github.com/python/mypy) and seems to have better
-  [VSCode/Cursor support](https://marketplace.visualstudio.com/items?itemName=detachhead.basedpyright)),
-  [**codespell**](https://github.com/codespell-project/codespell), and
-  [**pytest**](https://github.com/pytest-dev/pytest).
+- Workflows for **packaging and publishing to PyPI** with uv.
+  This has always been more confusing than it should be.
+  The
+  [official docs](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
+  about packaging are several pages long, and then even
+  [toy tutorials](https://realpython.com/pypi-publish-python-package/) about publishing
+  are even longer. This template makes all of that basically automatic with uv, GitHub
+  Actions, and dynamic versioning.
 
-- **Starter docs**
-  ([README.md](https://github.com/jlevy/simple-modern-uv/blob/main/template/README.md.jinja)
-  and
-  [development.md](https://github.com/jlevy/simple-modern-uv/blob/main/template/development.md.jinja))
-  with handy reminders on uv Python setup/installation and basic dev workflows using to
-  save time for you, users, and collaborators.
+- Type checking with [**BasedPyright**](https://github.com/detachhead/basedpyright).
+  (See below for more on this.)
 
-- In [**copier**](https://github.com/copier-org/copier) format, which (unlike with many
-  templates) means you can [pull future changes](#updating-your-project-template) to the
-  this template back into your project any time.
+- [**Pytest**](https://github.com/pytest-dev/pytest) for tests.
 
-- Short enough to read and understand in 10 minutes.
-  It's **only ~300 lines of code** so you can just look at it, use it, and change what
-  you want without fuss.
+- [**codespell**](https://github.com/codespell-project/codespell) for drop-in spell
+  checking.
 
-It doesn't have lots of options or try to use every bell and whistle.
-It just adds the above essentials.
+- **Starter docs** you can include if you wish for users
+  ([README.md](https://github.com/jlevy/simple-modern-uv/blob/main/template/README.md.jinja))
+  and developers
+  ([development.md](https://github.com/jlevy/simple-modern-uv/blob/main/template/development.md.jinja)).
+  It helps to keep these docs and reminders on uv Python setup/installation, basic dev
+  workflows, and VSCode extensions in the template itself so they are up to date.
 
-It should work whenever you want to use modern Python and uv with a build workflow in
-GitHub.
+## What's the Best Python Type Checker?
+
+The choice of what tool to use for type checking deserves some explanation.
+Like many, I'd previously been using [mypy](https://github.com/python/mypy), the OG type
+checker for Python. Mypy has since been enhanced with
+[BasedMypy](https://github.com/KotlinIsland/basedmypy).
+
+The other popular alternative is Microsoft's
+[Pyright](https://github.com/microsoft/pyright).
+And it has an extension/fork called
+[BasedPyright](https://github.com/DetachHead/basedpyright).
+
+All of these work, but note this is a choice not just of the build tooling but it is
+good to have it align with your IDE warnings.
+With the rises of AI-powered IDEs like Cursor and Windsurf that are VSCode extensions,
+it seems like type checking support as a VSCode-compatible extension is essential.
+
+It seems Microsoft's popular [VSCode extension for
+mypy](https://marketplace.visualstudio.com/items?itemName=ms-python.mypy-type-checker)
+is licensed only for use in VSCode and sometimes refuses to work in Cursor.
+[Cursor's docs](https://docs.cursor.com/guides/languages/python) suggest mypy but don't
+suggest a VSCode extension.
+
+After some experimentation, I found BasedPyright seems like an improved alternative to
+[pyright](https://github.com/microsoft/pyright).
+BasedPyright is newer but well maintained, is faster than Mypy, and has a good
+[VSCode extension](https://marketplace.visualstudio.com/items?itemName=detachhead.basedpyright)
+that works with Cursor and other VSCode forks.
+So I have now switched this template to use BasedPyright.
+(But please drop a note in the Discussion tab if you have better suggestions.)
 
 ## What This Template Does Not Include
+
+The template doesn't have lots of options or try to use every bell and whistle.
+It just adds the above essentials.
 
 This template **does not** handle:
 
@@ -106,7 +180,8 @@ This template **does not** handle:
   guidelines, code of conduct, etc.
 
 If you want them, just add these yourself.
-:) Or see [below](#alternatives) for other templates.
+:) Also see [below](#alternatives) for other templates you can look at or use as
+references.
 
 ## How to Use This Template
 
@@ -129,20 +204,16 @@ Just use
 which is the output of this template.
 
 Go there and hit the "Use this template" button.
-Once you have the code, search for **`_changeme_`** for all field names like project
-name, author, etc. You may also want to change the license/copyright.
+Once you have the code, search for **`changeme`** for all field names like project name,
+author, etc. You may also want to change the license/copyright.
 
 ### Option 2: Use Copier
 
 This template uses [copier](https://github.com/copier-org/copier), which seems like the
 best tool nowadays for project templates.
 Using copier is the recommended approach since it then lets you instantiate the template
-variables, but it requires a few more commands.
-
-> [!NOTE]
-> 
-> Copier has the cool feature to [update your project
-> template](#updating-your-project-template) as this template improves in the future.
+variables and makes future updates possible.
+But it requires a few more commands.
 
 To create a new project repo with `copier`:
 
@@ -156,7 +227,7 @@ copier copy gh:jlevy/simple-modern-uv your-project-name -r main
 ```
 
 You can enter names for the project, description, etc., or just press enter and later
-look for `_changeme_` in the code.
+look for `changeme` in the code.
 
 Once you have the template set up, you will need to check the code into Git for uv to
 work. [Create a new GitHub
