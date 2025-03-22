@@ -131,6 +131,7 @@ This template uses the tools I've come to think are best for new projects:
 ## What's the Best Python Type Checker?
 
 The choice of what tool to use for type checking deserves some explanation.
+This seems to be a confusing area.
 Like many, I'd previously been using [Mypy](https://github.com/python/mypy), the OG type
 checker for Python. Mypy has since been enhanced with
 [BasedMypy](https://github.com/KotlinIsland/basedmypy).
@@ -140,16 +141,19 @@ The other popular alternative is Microsoft's
 And it has a newer extension and fork called
 [BasedPyright](https://github.com/DetachHead/basedpyright).
 
-All of these work. But note this is a choice not just of the build tooling—it best to
-have it align with your IDE warnings.
+All of these work in build systems.
+But note this is a choice not just of the build tooling—it is by far preferable to have
+your type checker warnings align with your IDE warnings.
 With the rises of AI-powered IDEs like Cursor and Windsurf that are VSCode extensions,
 it seems like type checking support as a VSCode-compatible extension is essential.
 
-It seems Microsoft's popular [VSCode extension for
-mypy](https://marketplace.visualstudio.com/items?itemName=ms-python.mypy-type-checker)
-is licensed only for use in VSCode and sometimes refuses to work in Cursor.
-[Cursor's docs](https://docs.cursor.com/guides/languages/python) suggest mypy but don't
-suggest a VSCode extension.
+However, Microsoft's popular
+[Mypy VSCode extension](https://marketplace.visualstudio.com/items?itemName=ms-python.mypy-type-checker)
+is licensed only for use in VSCode (not other IDEs) and
+[sometimes](https://forum.cursor.com/t/pylance-server-fails-to-initialize-due-to-licensing-restriction/48548)
+[refuses](https://forum.cursor.com/t/does-pylance-just-not-work-with-cursor-how-to-get-imports-in-quick-fix-menu/5747)
+to work in Cursor. [Cursor's docs](https://docs.cursor.com/guides/languages/python)
+suggest Mypy but don't suggest a VSCode extension.
 
 After some experimentation, I found
 [BasedPyright](https://github.com/detachhead/basedpyright) to be a credible improvement
