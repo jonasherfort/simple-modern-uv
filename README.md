@@ -131,7 +131,7 @@ This template uses the tools I've come to think are best for new projects:
 ## What's the Best Python Type Checker?
 
 The choice of what tool to use for type checking deserves some explanation.
-Like many, I'd previously been using [mypy](https://github.com/python/mypy), the OG type
+Like many, I'd previously been using [Mypy](https://github.com/python/mypy), the OG type
 checker for Python. Mypy has since been enhanced with
 [BasedMypy](https://github.com/KotlinIsland/basedmypy).
 
@@ -249,9 +249,12 @@ git push -u origin main
 ## Getting Started on Your Project
 
 In the template project itself, the
-[**default readme**](https://github.com/jlevy/simple-modern-uv-template) and the file
-[**development.md**](https://github.com/jlevy/simple-modern-uv-template) covers the
-install and build workflows.
+[**default readme**](https://github.com/jlevy/simple-modern-uv) and the file
+[**development.md**](https://github.com/jlevy/simple-modern-uv/blob/main/template/development.md.jinja)
+cover the install and build workflows, as well as links to IDE extensions.
+See
+[**publishing.md**](https://github.com/jlevy/simple-modern-uv/blob/main/template/publishing.md)
+for publishing to PyPI. You'll find all these in your project directory, too.
 
 ## Updating Your Project Template
 
