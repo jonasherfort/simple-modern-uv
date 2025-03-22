@@ -221,8 +221,13 @@ To create a new project repo with `copier`:
 # Install copier:
 uv tool install copier
 
-# Clone this template:
-copier copy gh:jlevy/simple-modern-uv your-project-name -r main
+# Change dirs to the place you want the new GitHub repo to be.
+cd ~/projects/github   # Wherever you do your project work.
+
+# Clone this template. This does everything!
+# It will fetch from this GitHub repo and create a new directory
+# with whatever name you put below:
+copier copy gh:jlevy/simple-modern-uv YOURNEWREPO
 # Then follow the instructions.
 ```
 
