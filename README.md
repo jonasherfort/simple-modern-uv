@@ -18,6 +18,8 @@ project, like an open source library or tool.
 > You can remember or share this template at the short url
 > [**git.new/uvproject**](https://git.new/uvproject).
 
+**In a hurry?** Scroll down to [How to Use This Template](#how-to-use-this-template).
+
 ## Why a New Python Project Template?
 
 > **The Story So Far**
@@ -66,18 +68,6 @@ This is the template I now use myself as I learned uv and have been migrating fr
 Poetry to uv for several projects.
 It's new but it's working well.
 
-Also, a key benefit is it uses [**copier**](https://github.com/copier-org/copier) format
-as a template. This means (unlike with most templates) you can
-[pull future changes](#updating-your-project-template) to this template back into your
-project any time.
-
-> [!NOTE]
-> 
-> If you're not familiar with copier, take a moment to understand copier's very cool
-> update feature. In addition to being a a template you can copy, it it also lets you
-> [update your project](#updating-your-project-template) with improvements to this
-> template after you copy it!
-
 The template is short enough to read and understand in about 10 minutes.
 It's **only ~300 lines of code** so you can just look at it, use it, and change what you
 want without fuss.
@@ -85,9 +75,31 @@ want without fuss.
 Because this template is minimal, you can always start with it and then pull in other
 tools and features if you want them.
 
-## Tools Used by simple-modern-uv
+## Why Use a Copier Template?
 
-This template uses the tools I've come to think are best for new projects:
+One other benefit of this template is it uses
+[**copier**](https://github.com/copier-org/copier).
+
+Unlike many previous project template tools, it has you can
+[pull future changes](#updating-your-project-template) to this template back into your
+project any time.
+
+You can start a project now, then if this template improves or is updated with other
+tools, you can pull those improvements back into your project, much like a git merge.
+You could even fork this repo yourself, then build your own forked template, and
+maintain it yourself.
+
+> [!NOTE]
+> 
+> If you're not familiar with copier, take a moment to understand the
+> [update feature](#updating-your-project-template).
+> Then the options below will make sense.
+> I put a few more thoughts on why a workflow like this is underrated is in
+> [this thread](https://x.com/ojoshe/status/1896696860297019733).
+
+## What Tools are In This Template?
+
+simple-modern-uv uses uses the tools I've come to think are best for new projects:
 
 - [**uv**](https://github.com/astral-sh/uv) for project setup and dependencies.
   There is also a simple makefile for dev workflows, but it simply is a convenience for
@@ -132,6 +144,7 @@ This template uses the tools I've come to think are best for new projects:
 
 The choice of what tool to use for type checking deserves some explanation.
 This seems to be a confusing area.
+
 Like many, I'd previously been using [Mypy](https://github.com/python/mypy), the OG type
 checker for Python. Mypy has since been enhanced with
 [BasedMypy](https://github.com/KotlinIsland/basedmypy).
@@ -142,8 +155,8 @@ And it has a newer extension and fork called
 [BasedPyright](https://github.com/DetachHead/basedpyright).
 
 All of these work in build systems.
-But note this is a choice not just of the build tooling—it is by far preferable to have
-your type checker warnings align with your IDE warnings.
+But this is a choice not just of build tooling—it is far preferable to have your type
+checker warnings align with your IDE warnings.
 With the rises of AI-powered IDEs like Cursor and Windsurf that are VSCode extensions,
 it seems like type checking support as a VSCode-compatible extension is essential.
 
@@ -164,7 +177,7 @@ that works with Cursor and other VSCode forks.
 So I have now switched this template to use BasedPyright.
 (But please drop a note in the Discussion tab if you have better suggestions.)
 
-## What This Template Does Not Include
+## What Does This Template Does Not Include?
 
 The template doesn't have lots of options or try to use every bell and whistle.
 It just adds the above essentials.
