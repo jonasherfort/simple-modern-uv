@@ -79,6 +79,10 @@ vcs = "git"
 style = "pep440"
 bump = "true"
 
+[tool.hatch.build.targets.wheel]
+# The source location for the package.
+packages = ["src/{{ package_module }}"]
+
 
 # ---- Settings ----
 
