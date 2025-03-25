@@ -15,8 +15,8 @@ project, like an open source library or tool.
 
 > [!NOTE]
 > 
-> You can remember or share this template at the short url
-> [**git.new/uvproject**](https://git.new/uvproject).
+> You can remember or share this template at the short url:
+> [**git.new/uvproject**](https://git.new/uvproject)
 
 **In a hurry?** Scroll down to [How to Use This Template](#how-to-use-this-template).
 
@@ -177,7 +177,7 @@ that works with Cursor and other VSCode forks.
 So I have now switched this template to use BasedPyright.
 (But please drop a note in the Discussion tab if you have better suggestions.)
 
-## What Does This Template Does Not Include?
+## What Does This Template Not Include?
 
 The template doesn't have lots of options or try to use every bell and whistle.
 It just adds the above essentials.
