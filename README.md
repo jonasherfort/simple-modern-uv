@@ -48,10 +48,9 @@ project, like an open source library or tool.
 > [`pixi`](https://github.com/prefix-dev/pixi) aligned with Rust gathered strength …
 
 Apologies for the digression.
-
-The point is that unfortunately, the accidents of history make it hard to learn best
-practices for setting up Python projects and dependencies.
-But it shouldn't have to be this confusing, especially since uv has now significantly
+The point is that unfortunately, the accidents of history make it quite confusing
+to learn best practices for setting up Python projects and dependencies.
+But it shouldn't have to be this difficult, especially since uv has now significantly
 simplified Python dev tooling.
 
 I think a good project template should be **3 Ms: minimalist, modern, and maintained**.
@@ -294,7 +293,7 @@ changes to this template by running `copier update`.
 [Poetry](https://python-poetry.org/docs/basic-usage/) is a good option for managing
 dependencies and is not as new as uv and arguably more mature (it just hit version 2.0).
 This template is based on my earlier Poetry template,
-[**simple-modern-poetry**](https://github.com/jlevy/simple-modern-poetry).
+[simple-modern-poetry](https://github.com/jlevy/simple-modern-poetry).
 
 A great resource to check is
 [**python-blueprint**](https://github.com/johnthagen/python-blueprint), which is a more
