@@ -60,11 +60,11 @@ right" but *absolutely as simple as possible*. Few existing templates seem to be
 simple and use the newest generation of tools and best practices.
 
 If you haven't switched to uv, I can say I too was a little hesitant.
-It can be needlessly painful to switch dev tooling prematurely, simply be cause a new
-tool is shiny and new.
+It's often possible to switch dev tooling prematurely because a the new
+tool is shiny and exciting.
 But the advantages of uv have become too numerous to ignore.
 
-This is the template I now use myself as I learned uv and have been migrating from
+This is the template I now use myself as I have been migrating from
 Poetry to uv for several projects.
 It's new but it's working well.
 
