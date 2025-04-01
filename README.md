@@ -6,6 +6,11 @@ Appropriately enough, the comic is out of date.)
 
 # simple-modern-uv
 
+[![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
+[![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-border.json)](https://github.com/copier-org/copier)
+[![X (formerly Twitter)
+Follow](https://img.shields.io/twitter/follow/ojoshe)](https://x.com/ojoshe)
+
 ## What is This?
 
 **simple-modern-uv** is a minimal, modern **Python project template** for new projects
@@ -13,12 +18,21 @@ Appropriately enough, the comic is out of date.)
 be a good base for serious work but also simple so it's an easy option for any small
 project, like an open source library or tool.
 
-> [!NOTE]
+> [!TIP]
 > 
-> You can remember or share this template at the short url:
-> [**git.new/uvproject**](https://git.new/uvproject)
-
-**In a hurry?** Scroll down to [How to Use This Template](#how-to-use-this-template).
+> **In a hurry?**
+> 
+> You can use this template right from your terminal.
+> Try running:
+> 
+> ```
+> uvx uvinit
+> ```
+> 
+> The [uvinit](https://jlevy/uvinit) tool now walks you through using this template.
+> 
+> For more installation options, scroll down to [How to Use This
+> Template](#how-to-use-this-template).
 
 ## Why a New Python Project Template?
 
@@ -48,8 +62,8 @@ project, like an open source library or tool.
 > [`pixi`](https://github.com/prefix-dev/pixi) aligned with Rust gathered strength …
 
 Apologies for the digression.
-The point is that unfortunately, the accidents of history make it quite confusing
-to learn best practices for setting up Python projects and dependencies.
+The point is that unfortunately, the accidents of history make it quite confusing to
+learn best practices for setting up Python projects and dependencies.
 But it shouldn't have to be this difficult, especially since uv has now significantly
 simplified Python dev tooling.
 
@@ -59,13 +73,11 @@ right" but *absolutely as simple as possible*. Few existing templates seem to be
 simple and use the newest generation of tools and best practices.
 
 If you haven't switched to uv, I can say I too was a little hesitant.
-It's often possible to switch dev tooling prematurely because a the new
-tool is shiny and exciting.
-But the advantages of uv have become too numerous to ignore.
+It's often possible to switch dev tooling prematurely because a the new tool is shiny
+and exciting. But the advantages of uv have become too numerous to ignore.
 
-This is the template I now use myself as I have been migrating from
-Poetry to uv for several projects.
-It's new but it's working well.
+This is the template I now use myself as I have been migrating from Poetry to uv for
+several projects. It's new but it's working well.
 
 The template is short enough to read and understand in about 10 minutes.
 It's **only ~300 lines of code** so you can just look at it, use it, and change what you
@@ -210,21 +222,20 @@ references.
 > If desired, you may delete the `.github/workflows/publish.yml` file if you are not
 > publishing to PyPI.
 
-The template can be used in two ways.
-Option 1 is quickest.
-For more flexibility, consider Option 2.
+The template can be used in three ways.
+Option 1 is the quickest option with full flexibility.
+Option 2 is the normal way to use a copier template by hand.
+Option 3 is handy if you prefer a GitHub template.
 
-### Option 1: GitHub Template
+### Option 1: Run `uvx uvinit`
 
-Just use
-[**this template repository**](https://github.com/jlevy/simple-modern-uv-template),
-which is the output of this template.
+I've now created a little tool, [uvinit](https://www.github.com/jlevy/uvinit) that
+copies this template for you.
 
-Go there and hit the "Use this template" button.
-Once you have the code, search for **`changeme`** for all field names like project name,
-author, etc. You may also want to change the license/copyright.
+It's basically the same as running `copier` and a few `git` commands yourself, with a
+little more guidance and less typing.
 
-### Option 2: Use Copier
+### Option 3: Use `copier` and `git` Yourself
 
 This template uses [copier](https://github.com/copier-org/copier), which seems like the
 best tool nowadays for project templates.
@@ -267,6 +278,17 @@ git remote add origin git@github.com:OWNER/PROJECT.git  # or https://github.com/
 git branch -M main
 git push -u origin main
 ```
+
+### Option 3: Use the GitHub Template
+
+If you prefer you can click the **use this template** on
+[**this repository**](https://github.com/jlevy/simple-modern-uv-template), which is the
+current output of this template.
+
+Go there and hit the "Use this template" button.
+Once you have the code, search for **`changeme`** for all field names like project name,
+author, etc. You want to do this to the `.copier-answers.yml` file as well.
+You will also want to check the license/copyright.
 
 ## Getting Started on Your Project
 
