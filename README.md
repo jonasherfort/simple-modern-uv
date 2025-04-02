@@ -25,11 +25,11 @@ project, like an open source library or tool.
 > You can use this template right from your terminal.
 > Try running:
 > 
-> ```
+> ```shell
 > uvx uvinit
 > ```
 > 
-> The [uvinit](https://jlevy/uvinit) tool now walks you through using this template.
+> The [uvinit](https://git.new/uvinit) tool now walks you through using this template.
 > 
 > For more installation options, scroll down to [How to Use This
 > Template](#how-to-use-this-template).
@@ -230,12 +230,16 @@ Option 3 is handy if you prefer a GitHub template.
 ### Option 1: Run `uvx uvinit`
 
 I've now created a little tool, [uvinit](https://www.github.com/jlevy/uvinit) that
-copies this template for you.
+copies this template for you and walks you through everything:
 
-It's basically the same as running `copier` and a few `git` commands yourself, with a
-little more guidance and less typing.
+```shell
+uvx uvinit
+```
 
-### Option 3: Use `copier` and `git` Yourself
+It's the same as running `copier` and a few `git` commands yourself, with a little more
+guidance and less typing.
+
+### Option 2: Use `copier` and `git` Yourself
 
 This template uses [copier](https://github.com/copier-org/copier), which seems like the
 best tool nowadays for project templates.
