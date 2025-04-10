@@ -71,6 +71,8 @@ simplified Python dev tooling.
 If you haven't switched to uv, I can say I too was a little hesitant.
 It's often possible to switch dev tooling prematurely because a the new tool is shiny
 and exciting. But the advantages of uv have become too numerous to ignore.
+[This article](https://www.bitecode.dev/p/a-year-of-uv-pros-cons-and-should) (Feb 2025)
+has a good overview.
 
 This is the template I now use myself as I have been migrating from Poetry to uv for
 several projects. It's new but it's working well.
@@ -94,6 +96,9 @@ want without fuss.
 
 Because this template is minimal, you can always start with it and then pull in other
 tools and features if you want them.
+(In fact, even if you don't like this template, you might want to use it as inspiration
+for your *own* Copier template, to take advantage of the Copier update workflow
+discussed next.)
 
 ## Why Use Copier?
 
@@ -111,7 +116,7 @@ maintain it yourself.
 
 > [!NOTE]
 > 
-> If you're not familiar with copier, take a moment to understand the
+> If you're not familiar with Copier, take a moment to understand the
 > [update feature](#updating-your-project-template).
 > Then the options below will make sense.
 > I put a few more thoughts on why a workflow like this is underrated is in
@@ -233,7 +238,7 @@ references.
 
 The template can be used in three ways.
 Option 1 is the quickest option with full flexibility.
-Option 2 is the normal way to use a copier template by hand.
+Option 2 is the normal way to use a Copier template by hand.
 Option 3 is handy if you prefer a GitHub template.
 
 ### Option 1: Run `uvx uvinit`
@@ -250,16 +255,16 @@ guidance and less typing.
 
 ### Option 2: Use `copier` and `git` Yourself
 
-This template uses [copier](https://github.com/copier-org/copier), which seems like the
+This template uses [Copier](https://github.com/copier-org/copier), which seems like the
 best tool nowadays for project templates.
-Using copier is the recommended approach since it then lets you instantiate the template
+Using Copier is the recommended approach since it then lets you instantiate the template
 variables and makes future updates possible.
 But it requires a few more commands.
 
 To create a new project repo with `copier`:
 
 ```shell
-# Install copier:
+# Install Copier:
 uv tool install copier
 
 # Change dirs to the place you want the new GitHub repo to be.
@@ -325,22 +330,7 @@ changes to this template by running `copier update`.
 
 ## Alternatives
 
-[Poetry](https://python-poetry.org/docs/basic-usage/) is a good option for managing
-dependencies and is not as new as uv and arguably more mature (it just hit version 2.0).
-This template is based on my earlier Poetry template,
-[simple-modern-poetry](https://github.com/jlevy/simple-modern-poetry).
-
-A great resource to check is
-[**python-blueprint**](https://github.com/johnthagen/python-blueprint), which is a more
-established template with an excellent overview of other standard Python project best
-practices. It uses [Poetry](https://python-poetry.org/docs/basic-usage/),
-[nox](https://github.com/wntrblm/nox),
-[Material for Mkdocs](https://github.com/squidfunk/mkdocs-material), and Docker.
-
-For [Conda](https://github.com/conda/conda) dependencies, also consider the newer
-[**pixi**](https://github.com/prefix-dev/pixi/) package manager.
-
-Finally, there are several other good uv templates, such as
+There are a couple other good uv templates, especially
 [**cookiecutter-uv**](https://github.com/fpgmaas/cookiecutter-uv) and
 [**copier-uv**](https://github.com/pawamoy/copier-uv) you may wish to consider.
 
@@ -349,6 +339,25 @@ I found existing templates to have machinery or files you often don't need.
 And it's hard to maintain a complex template repo.
 This is intended instead to be a very simple template.
 You can always add to it if you want.
+
+There is also [**uv-migrator**](https://github.com/stvnksslr/uv-migrator) to help you
+migrate projects to uv.
+
+Previously, [Poetry](https://python-poetry.org/docs/basic-usage/) was probably the best
+modern tool for managing dependencies.
+It is not as new as uv and arguably more mature (it just hit version 2.0). In fact, this
+template is based on my earlier Poetry template,
+[simple-modern-poetry](https://github.com/jlevy/simple-modern-poetry).
+
+Another great resource to check is
+[**python-blueprint**](https://github.com/johnthagen/python-blueprint), which is a more
+established template with an excellent overview of other standard Python project best
+practices. It uses [Poetry](https://python-poetry.org/docs/basic-usage/),
+[nox](https://github.com/wntrblm/nox),
+[Material for Mkdocs](https://github.com/squidfunk/mkdocs-material), and Docker.
+
+For [Conda](https://github.com/conda/conda) dependencies, also consider the newer
+[**pixi**](https://github.com/prefix-dev/pixi/) package manager.
 
 ## Contributing
 
