@@ -19,11 +19,11 @@ Follow](https://img.shields.io/twitter/follow/ojoshe)](https://x.com/ojoshe)
 be a good base for serious work but also simple so it's an easy option for any small
 project, like an open source library or tool.
 
+## In a Hurry?
+
 > [!TIP]
 > 
-> **In a hurry?**
-> 
-> You can use this template right from your terminal.
+> You can try out this template right from your terminal.
 > Try running:
 > 
 > ```shell
@@ -68,24 +68,25 @@ learn best practices for setting up Python projects and dependencies.
 But it shouldn't have to be this difficult, especially since uv has now significantly
 simplified Python dev tooling.
 
-## But I Don't Like Templates
-
-A lot of more senior engineers have justified hesitancy about templates.
-Templates can be a real problem if they add mindless, unexamined complexity.
-But if done carefully, I think they are better than official docs (they show real-world
-code you can adapt) or blog posts (that are typically not maintained or updated).
-
-I think a good project template should be **3 Ms: minimalist, modern, and maintained**.
-I looked at [other templates](#alternatives) but wanted one that was modern and "done
-right" but *absolutely as simple as possible*. Few existing templates seem to be both
-simple and use the newest generation of tools and best practices.
-
 If you haven't switched to uv, I can say I too was a little hesitant.
 It's often possible to switch dev tooling prematurely because a the new tool is shiny
 and exciting. But the advantages of uv have become too numerous to ignore.
 
 This is the template I now use myself as I have been migrating from Poetry to uv for
 several projects. It's new but it's working well.
+
+## But I Don't Like Templates
+
+A lot of more senior engineers have justified hesitancy about templates.
+Templates can be a real problem if they add mindless, unexamined complexity.
+But if done carefully, I think they are better than official docs (they show real-world
+code you can adapt, instead of leaving you to figure out each tool choice and setting)
+or blog posts (that are typically not maintained or updated).
+
+I think a good project template should be **3 Ms: minimalist, modern, and maintained**.
+I looked at [other templates](#alternatives) but wanted one that was modern and "done
+right" but *absolutely as simple as possible*. Few existing templates seem to be both
+simple and use the newest generation of tools and best practices.
 
 The template is short enough to read and understand in about 10 minutes.
 It's **only ~300 lines of code** so you can just look at it, use it, and change what you
@@ -94,14 +95,14 @@ want without fuss.
 Because this template is minimal, you can always start with it and then pull in other
 tools and features if you want them.
 
-## Why Use a Copier Template?
+## Why Use Copier?
 
 One other benefit of this template is it uses
 [**copier**](https://github.com/copier-org/copier).
 
-Unlike many previous project template tools, it has you can
-[pull future changes](#updating-your-project-template) to this template back into your
-project any time.
+Unlike with many previous project template tools, Copier allows you
+[pull future changes](#updating-your-project-template) to a template back into your
+instantiated copy any time.
 
 You can start a project now, then if this template improves or is updated with other
 tools, you can pull those improvements back into your project, much like a git merge.
@@ -114,7 +115,7 @@ maintain it yourself.
 > [update feature](#updating-your-project-template).
 > Then the options below will make sense.
 > I put a few more thoughts on why a workflow like this is underrated is in
-> [this thread](https://x.com/ojoshe/status/1896696860297019733).
+> [a Twitter thread](https://x.com/ojoshe/status/1896696860297019733).
 
 ## What Tools are In This Template?
 
