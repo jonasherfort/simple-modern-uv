@@ -6,6 +6,7 @@ Appropriately enough, the comic is out of date.)
 
 # simple-modern-uv
 
+[![image](https://img.shields.io/pypi/pyversions/uvinit.svg)](https://pypi.python.org/pypi/uvinit)
 [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
 [![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-border.json)](https://github.com/copier-org/copier)
 [![X (formerly Twitter)
@@ -14,7 +15,7 @@ Follow](https://img.shields.io/twitter/follow/ojoshe)](https://x.com/ojoshe)
 ## What is This?
 
 **simple-modern-uv** is a minimal, modern **Python project template** for new projects
-(Python 3.10–3.13) based on [**uv**](https://docs.astral.sh/uv/). This template aims to
+(Python 3.11–3.13) based on [**uv**](https://docs.astral.sh/uv/). This template aims to
 be a good base for serious work but also simple so it's an easy option for any small
 project, like an open source library or tool.
 
