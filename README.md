@@ -67,6 +67,13 @@ learn best practices for setting up Python projects and dependencies.
 But it shouldn't have to be this difficult, especially since uv has now significantly
 simplified Python dev tooling.
 
+## But I Don't Like Templates
+
+A lot of more senior engineers have justified hesitancy about templates.
+Templates can be a real problem if they add mindless, unexamined complexity.
+But if done carefully, I think they are better than official docs (they show real-world
+code you can adapt) or blog posts (that are typically not maintained or updated).
+
 I think a good project template should be **3 Ms: minimalist, modern, and maintained**.
 I looked at [other templates](#alternatives) but wanted one that was modern and "done
 right" but *absolutely as simple as possible*. Few existing templates seem to be both
@@ -306,7 +313,7 @@ for publishing to PyPI. You'll find all these in your project directory, too.
 
 ## Updating Your Project Template
 
-If you use Option 2 or if you pick Option 1 and correctly fill in your
+If you use Option 1 or Option 2 or if you pick Option 3 and correctly fill in your
 `.copier-answers.yml` file, you have the option to update your project with any future
 updates to this template at any time.
 
