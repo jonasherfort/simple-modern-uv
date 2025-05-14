@@ -153,7 +153,9 @@ simple-modern-uv uses uses the tools I've come to think are best for new project
 - Type checking with [**BasedPyright**](https://github.com/detachhead/basedpyright).
   (See below for more on this.)
 
-- [**Pytest**](https://github.com/pytest-dev/pytest) for tests.
+- [**Pytest**](https://github.com/pytest-dev/pytest) for tests (with the excellent
+  plugin [**pytest-sugar**](https://github.com/Teemu/pytest-sugar) for faster errors and
+  nicer output).
 
 - [**codespell**](https://github.com/codespell-project/codespell) for drop-in spell
   checking.
