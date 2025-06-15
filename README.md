@@ -169,7 +169,7 @@ simple-modern-uv uses uses the tools I've come to think are best for new project
 
 - **Agent rules** with a few sensible general and specific rules for modern Python.
   These are usable for Cursor, Claude Code, and OpenAI Codex.
-  These are in [.cursor/rules](.cursor/rules) and copied by the [Makefile](Makefile) to
+  These are in [.cursor/rules](template/.cursor/rules) and copied by the [Makefile](template/Makefile) to
   [`CLAUDE.md`](https://docs.anthropic.com/en/docs/claude-code/memory) and
   [`AGENTS.md`](https://github.com/openai/codex#memory--project-docs).
   (Of course you can adjust these as you wish.)
