@@ -160,12 +160,34 @@ simple-modern-uv uses uses the tools I've come to think are best for new project
 - [**codespell**](https://github.com/codespell-project/codespell) for drop-in spell
   checking.
 
-- **Starter docs** you can include if you wish for users
-  ([README.md](https://github.com/jlevy/simple-modern-uv/blob/main/template/README.md.jinja))
-  and developers
-  ([development.md](https://github.com/jlevy/simple-modern-uv/blob/main/template/development.md.jinja)).
-  It helps to keep these docs and reminders on uv Python setup/installation, basic dev
-  workflows, and VSCode extensions in the template itself so they are up to date.
+## Starter Docs
+
+The template includes a few **starter docs** for you, collaborators, and users:
+
+- [README.md](https://github.com/jlevy/simple-modern-uv/blob/main/template/README.md.jinja)
+  is a placeholder for your project readme.
+
+- [installation.md](https://github.com/jlevy/simple-modern-uv/blob/main/template/installation.md)
+  has brief reminders on the modern ways to install uv and Python.
+
+- [development.md](https://github.com/jlevy/simple-modern-uv/blob/main/template/development.md.jinja)
+  covers basic developer workflows.
+
+- [publishing.md](https://github.com/jlevy/simple-modern-uv/blob/main/template/publishing.md)
+  covers how to publish your project to PyPI.
+
+> [!TIP]
+> 
+> If you haven't done it before, publishing a package to PyPI can be a bit confusing,
+> especially because the
+> [official Python docs](https://packaging.python.org/en/latest/guides/section-build-and-publish/)
+> cover older and more complex workflows.
+> Be sure to check `publishing.md` for a modern and simple way that uses uv and GitHub
+> actions.
+
+You can edit or delete these, but typically it's sufficient to just edit the README.md.
+It helps to have the others in separate files so they get updated whenever you update
+the template.
 
 ## Agent Rules
 
@@ -228,6 +250,10 @@ This template **does not** handle:
 
 - Using Docker
 
+- Private or enterprise package repositories (but you can add this—see [uv's docs on
+  alternative
+  indexes](https://docs.astral.sh/uv/guides/integration/alternative-indexes/))
+
 - Building websites or docs, e.g. with [mkdocs](https://github.com/mkdocs/mkdocs)
 
 - Using [Conda](https://github.com/conda/conda) for dependencies (but note many deep
@@ -239,8 +265,11 @@ This template **does not** handle:
 - Boilerplate docs or project management of any kind, like issue templates, contributing
   guidelines, code of conduct, etc.
 
-If you want them, just add these yourself.
-:) Also see [below](#alternatives) for other templates you can look at or use as
+Docker and private repo use can be added by you manually to the project after you get
+started. Similarly, you can change CI/CD workflows if you are not using GitHub or GitHub
+Actions or PyPI.
+
+Also see [below](#alternatives) for other templates you can look at or use as
 references.
 
 ## How to Use This Template
@@ -327,13 +356,9 @@ You will also want to check the license/copyright.
 
 ## Getting Started on Your Project
 
-In the template project itself, the
-[**default readme**](https://github.com/jlevy/simple-modern-uv) and the file
-[**development.md**](https://github.com/jlevy/simple-modern-uv/blob/main/template/development.md.jinja)
-cover the install and build workflows, as well as links to IDE extensions.
-See
-[**publishing.md**](https://github.com/jlevy/simple-modern-uv/blob/main/template/publishing.md)
-for publishing to PyPI. You'll find all these in your project directory, too.
+Everything to get started is linked from the project **README.md**. It links to the
+**installation.md**, **development.md**, and **publishing.md**
+[starter docs](#starter-docs).
 
 ## Updating Your Project Template
 
